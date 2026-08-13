@@ -1,206 +1,517 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>MEU ACHADO</title>
 
 <style>
 
+/* =========================
+   CONFIGURAÇÕES GERAIS
+   ========================= */
+
 * {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(135deg, #f8f2ff, #ffffff);
-    color: #17131c;
+
+    /* FUNDO TODO LILÁS */
+    background:
+        linear-gradient(
+            135deg,
+            #ead7ff 0%,
+            #d8b4f8 45%,
+            #f3e8ff 100%
+        );
+
+    color: #21152b;
 }
 
-/* CABEÇALHO */
+
+/* =========================
+   CABEÇALHO
+   ========================= */
 
 header {
-    background: linear-gradient(135deg, #0d0b10, #21162b);
-    color: white;
+
     text-align: center;
-    padding: 35px 20px;
-    border-bottom: 4px solid #d4af37;
+
+    padding: 45px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7b3fb5,
+            #9b62d1,
+            #6f329f
+        );
+
+    border-bottom: 5px solid #d4af37;
+
+    box-shadow:
+        0 8px 25px rgba(70, 30, 100, 0.25);
+
 }
 
 header h1 {
+
     margin: 0;
-    color: #d4af37;
-    font-size: 42px;
-    letter-spacing: 2px;
+
+    color: #ffd84d;
+
+    font-size: 45px;
+
+    letter-spacing: 3px;
+
+    text-shadow:
+        0 2px 8px rgba(0,0,0,0.25);
+
 }
 
 header p {
-    margin: 10px 0 0;
-    font-size: 17px;
-    color: #ead7ff;
+
+    margin-top: 12px;
+
+    color: white;
+
+    font-size: 18px;
+
 }
 
-/* INFORMAÇÕES */
+
+/* =========================
+   INFORMAÇÕES
+   ========================= */
 
 .info-meu-achado {
+
     max-width: 1000px;
-    margin: 25px auto;
-    padding: 25px 20px;
-    background: #0d0b10;
-    border: 2px solid #d4af37;
-    border-radius: 20px;
+
+    margin: 30px auto;
+
+    padding: 28px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8f51c4,
+            #6e349e
+        );
+
+    border: 3px solid #d4af37;
+
+    border-radius: 24px;
+
     text-align: center;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+
+    box-shadow:
+        0 10px 30px rgba(80, 40, 110, 0.25);
+
 }
 
 .info-meu-achado h2 {
+
     margin-top: 0;
-    color: #d4af37;
-    font-size: 26px;
+
+    color: #ffd84d;
+
+    font-size: 28px;
+
 }
 
 .info-item {
+
     color: white;
-    font-size: 16px;
-    margin: 12px 0;
-    line-height: 1.5;
+
+    font-size: 17px;
+
+    margin: 14px 0;
+
+    line-height: 1.6;
+
 }
 
 .info-item strong {
-    color: #d4af37;
+
+    color: #ffd84d;
+
 }
 
 .info-item a {
+
     color: white;
+
     text-decoration: none;
+
     font-weight: bold;
+
 }
 
-/* PRODUTOS */
+.info-item a:hover {
+
+    color: #ffd84d;
+
+}
+
+
+/* =========================
+   TÍTULO DOS PRODUTOS
+   ========================= */
+
+.titulo-produtos {
+
+    text-align: center;
+
+    color: #6b3296;
+
+    font-size: 30px;
+
+    margin: 35px 15px 10px;
+
+    text-shadow:
+        0 1px 2px rgba(255,255,255,0.8);
+
+}
+
+
+/* =========================
+   GRID DE PRODUTOS
+   ========================= */
 
 .produtos-meu-achado {
+
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 22px;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(260px, 1fr)
+        );
+
+    gap: 25px;
+
     padding: 25px;
-    max-width: 1200px;
+
+    max-width: 1250px;
+
     margin: auto;
+
 }
 
+
+/* =========================
+   CARD DO PRODUTO
+   ========================= */
+
 .produto {
-    background: white;
-    border: 1px solid #ead7ff;
-    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff,
+            #faf3ff
+        );
+
+    border: 2px solid #d4af37;
+
+    border-radius: 24px;
+
     padding: 20px;
+
     text-align: center;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-    transition: transform 0.2s, box-shadow 0.2s;
+
+    box-shadow:
+        0 10px 28px rgba(80, 40, 110, 0.18);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
 }
 
 .produto:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.14);
+
+    transform:
+        translateY(-7px);
+
+    box-shadow:
+        0 16px 35px rgba(80, 40, 110, 0.28);
+
 }
 
-.produto h2 {
-    color: #17131c;
-    font-size: 20px;
-    margin: 12px 0;
-}
 
-.produto b {
-    display: block;
-    color: #b28b00;
-    font-size: 25px;
-    margin: 10px 0;
-}
-
-.produto p {
-    color: #6f6878;
-    line-height: 1.5;
-    min-height: 65px;
-}
+/* =========================
+   IMAGENS
+   ========================= */
 
 .produto img {
+
     width: 100%;
+
     max-width: 330px;
+
     height: 260px;
+
     object-fit: contain;
+
     display: block;
+
     margin: 0 auto 15px;
-    border-radius: 14px;
-    background: #f8f2ff;
+
+    border-radius: 18px;
+
+    background: #f2e4ff;
+
+    border: 1px solid #ead7ff;
+
 }
 
-/* GALERIA */
+
+/* =========================
+   GALERIA
+   ========================= */
 
 .galeria {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 12px;
+
 }
 
-/* BOTÃO */
+
+/* =========================
+   NOME DO PRODUTO
+   ========================= */
+
+.produto h2 {
+
+    color: #51236f;
+
+    font-size: 20px;
+
+    line-height: 1.3;
+
+    margin: 15px 0 8px;
+
+}
+
+
+/* =========================
+   PREÇO
+   ========================= */
+
+.produto b {
+
+    display: block;
+
+    color: #b8860b;
+
+    font-size: 27px;
+
+    margin: 10px 0;
+
+}
+
+
+/* =========================
+   DESCRIÇÃO
+   ========================= */
+
+.produto p {
+
+    color: #675873;
+
+    line-height: 1.55;
+
+    min-height: 70px;
+
+    font-size: 15px;
+
+}
+
+
+/* =========================
+   BOTÃO COMPRAR
+   ========================= */
 
 .produto a {
+
     text-decoration: none;
+
 }
 
 .produto button {
+
     width: 100%;
-    padding: 14px;
+
+    padding: 15px;
+
     border: 2px solid #d4af37;
-    border-radius: 12px;
-    background: #0d0b10;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6e349e,
+            #8d4fc0
+        );
+
     color: white;
+
     font-size: 15px;
+
     font-weight: bold;
+
     cursor: pointer;
+
+    transition:
+        0.2s ease;
+
 }
 
 .produto button:hover {
-    background: #d4af37;
-    color: #0d0b10;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d4af37,
+            #f0cf58
+        );
+
+    color: #30153f;
+
+    transform:
+        scale(1.02);
+
 }
 
-/* RODAPÉ */
+
+/* =========================
+   RODAPÉ
+   ========================= */
 
 footer {
-    margin-top: 30px;
-    background: #0d0b10;
-    color: white;
+
+    margin-top: 35px;
+
+    padding: 30px 15px;
+
     text-align: center;
-    padding: 25px 15px;
-    border-top: 3px solid #d4af37;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6e349e,
+            #8d4fc0,
+            #6e349e
+        );
+
+    border-top: 5px solid #d4af37;
+
+    color: white;
+
 }
 
 footer strong {
-    color: #d4af37;
+
+    color: #ffd84d;
+
+    font-size: 22px;
+
 }
 
-/* CELULAR */
+footer p {
+
+    margin: 9px 0;
+
+}
+
+
+/* =========================
+   CELULAR
+   ========================= */
 
 @media (max-width: 600px) {
 
+    header {
+
+        padding: 35px 15px;
+
+    }
+
     header h1 {
-        font-size: 32px;
+
+        font-size: 34px;
+
+    }
+
+    header p {
+
+        font-size: 15px;
+
     }
 
     .produtos-meu-achado {
+
         grid-template-columns: 1fr;
+
         padding: 15px;
+
     }
 
     .produto {
+
         padding: 18px;
+
     }
+
+    .produto img {
+
+        height: 240px;
+
+    }
+
+    .info-meu-achado {
+
+        margin: 20px 15px;
+
+    }
+
+}
+
+
+/* =========================
+   SELEÇÃO DE TEXTO
+   ========================= */
+
+::selection {
+
+    background: #d4af37;
+
+    color: #351546;
 
 }
 
 </style>
+
 </head>
+
 
 <body>
 
@@ -229,28 +540,47 @@ footer strong {
     <h2>🛍️ MEU ACHADO</h2>
 
     <div class="info-item">
+
         📞 <strong>Telefone:</strong>
+
         <a href="tel:+5527996128074">
             (27) 99612-8074
         </a>
+
     </div>
 
     <div class="info-item">
+
         📍 <strong>Endereço:</strong>
+
         Guarapari – Espírito Santo
+
     </div>
 
     <div class="info-item">
+
         🚚 <strong>Entrega:</strong>
+
         Para todo o Brasil
+
     </div>
 
     <div class="info-item">
+
         💳 <strong>Pagamento:</strong>
+
         Pix, cartão e boleto
+
     </div>
 
 </section>
+
+
+<h2 class="titulo-produtos">
+
+    ✨ NOSSOS PRODUTOS ✨
+
+</h2>
 
 
 <!-- =========================
@@ -271,19 +601,28 @@ footer strong {
         alt="Aparador de Cabelo H'Maston LFJ03"
     >
 
-    <h2>Aparador de Cabelo H'Maston LFJ03</h2>
+    <h2>
+        Aparador de Cabelo H'Maston LFJ03
+    </h2>
 
-    <b>R$ 79,99</b>
+    <b>
+        R$ 79,99
+    </b>
 
     <p>
         Aparador de cabelo H'Maston LFJ03,
         prático e ideal para cuidados pessoais.
     </p>
 
-    <a href="https://www.asaas.com/c/eoa88e4fcrdu8gg3" target="_blank">
+    <a
+        href="https://www.asaas.com/c/eoa88e4fcrdu8gg3"
+        target="_blank"
+    >
+
         <button type="button">
             🛍️ COMPRAR AGORA
         </button>
+
     </a>
 
 </div>
@@ -300,19 +639,28 @@ footer strong {
         alt="Lanterna USB H'Maston HW02"
     >
 
-    <h2>Lanterna USB H'Maston HW02</h2>
+    <h2>
+        Lanterna USB H'Maston HW02
+    </h2>
 
-    <b>R$ 30,00</b>
+    <b>
+        R$ 30,00
+    </b>
 
     <p>
         Lanterna USB H'Maston HW02,
         compacta, prática e potente.
     </p>
 
-    <a href="https://www.asaas.com/c/fsjm47sqv1rxzyat" target="_blank">
+    <a
+        href="https://www.asaas.com/c/fsjm47sqv1rxzyat"
+        target="_blank"
+    >
+
         <button type="button">
             🛍️ COMPRAR AGORA
         </button>
+
     </a>
 
 </div>
@@ -338,19 +686,28 @@ footer strong {
 
     </div>
 
-    <h2>Mini Processador Tomate SRQ-016</h2>
+    <h2>
+        Mini Processador Tomate SRQ-016
+    </h2>
 
-    <b>R$ 39,99</b>
+    <b>
+        R$ 39,99
+    </b>
 
     <p>
         Mini processador prático para facilitar
         o preparo dos alimentos no dia a dia.
     </p>
 
-    <a href="https://www.asaas.com/c/v2t8udyrkdpiww4h" target="_blank">
+    <a
+        href="https://www.asaas.com/c/v2t8udyrkdpiww4h"
+        target="_blank"
+    >
+
         <button type="button">
             🛍️ COMPRAR AGORA
         </button>
+
     </a>
 
 </div>
@@ -376,19 +733,28 @@ footer strong {
 
     </div>
 
-    <h2>Caixa de Som IPX6 Portátil</h2>
+    <h2>
+        Caixa de Som IPX6 Portátil
+    </h2>
 
-    <b>R$ 79,99</b>
+    <b>
+        R$ 79,99
+    </b>
 
     <p>
         Caixa de som portátil com proteção IPX6,
         ideal para ouvir suas músicas em diversos momentos.
     </p>
 
-    <a href="https://www.asaas.com/c/dt628m98fvqkm2bt" target="_blank">
+    <a
+        href="https://www.asaas.com/c/dt628m98fvqkm2bt"
+        target="_blank"
+    >
+
         <button type="button">
             🛍️ COMPRAR AGORA
         </button>
+
     </a>
 
 </div>
@@ -405,19 +771,28 @@ footer strong {
         alt="Suporte Veicular Universal"
     >
 
-    <h2>Suporte Veicular Universal</h2>
+    <h2>
+        Suporte Veicular Universal
+    </h2>
 
-    <b>R$ 39,99</b>
+    <b>
+        R$ 39,99
+    </b>
 
     <p>
         Suporte universal para celular no veículo
         com ajuste de ângulo de 360°.
     </p>
 
-    <a href="https://www.asaas.com/c/m0x24rts81acyv8q" target="_blank">
+    <a
+        href="https://www.asaas.com/c/m0x24rts81acyv8q"
+        target="_blank"
+    >
+
         <button type="button">
             🛍️ COMPRAR AGORA
         </button>
+
     </a>
 
 </div>
@@ -443,19 +818,28 @@ footer strong {
 
     </div>
 
-    <h2>Garrafa Térmica Inox Animal Print 600 ml</h2>
+    <h2>
+        Garrafa Térmica Inox Animal Print 600 ml
+    </h2>
 
-    <b>R$ 59,99</b>
+    <b>
+        R$ 59,99
+    </b>
 
     <p>
         Garrafa térmica em aço inox com estampa
         animal print, prática e elegante.
     </p>
 
-    <a href="https://www.asaas.com/c/q3kmms6ackkmlffe" target="_blank">
+    <a
+        href="https://www.asaas.com/c/q3kmms6ackkmlffe"
+        target="_blank"
+    >
+
         <button type="button">
             🛍️ COMPRAR AGORA
         </button>
+
     </a>
 
 </div>
@@ -481,19 +865,28 @@ footer strong {
 
     </div>
 
-    <h2>Garrafa Térmica Inox Azul 600 ml</h2>
+    <h2>
+        Garrafa Térmica Inox Azul 600 ml
+    </h2>
 
-    <b>R$ 59,99</b>
+    <b>
+        R$ 59,99
+    </b>
 
     <p>
-        Garrafa térmica em inox com estampa de
-        pássaros, ideal para o uso diário.
+        Garrafa térmica em inox com estampa
+        de pássaros, ideal para o uso diário.
     </p>
 
-    <a href="https://www.asaas.com/c/gl2aqbn42d81qmam" target="_blank">
+    <a
+        href="https://www.asaas.com/c/gl2aqbn42d81qmam"
+        target="_blank"
+    >
+
         <button type="button">
             🛍️ COMPRAR AGORA
         </button>
+
     </a>
 
 </div>
@@ -519,19 +912,28 @@ footer strong {
 
     </div>
 
-    <h2>Massageador Muscular Elétrico Ultra Potência</h2>
+    <h2>
+        Massageador Muscular Elétrico Ultra Potência
+    </h2>
 
-    <b>R$ 120,00</b>
+    <b>
+        R$ 120,00
+    </b>
 
     <p>
         Massageador muscular elétrico com vibração
         de alta frequência para massagem profunda.
     </p>
 
-    <a href="https://www.asaas.com/c/1s3c88ucgwcogyu0" target="_blank">
+    <a
+        href="https://www.asaas.com/c/1s3c88ucgwcogyu0"
+        target="_blank"
+    >
+
         <button type="button">
             🛍️ COMPRAR AGORA
         </button>
+
     </a>
 
 </div>
@@ -557,19 +959,28 @@ footer strong {
 
     </div>
 
-    <h2>Garrafa Térmica Inox 700 ml Preta</h2>
+    <h2>
+        Garrafa Térmica Inox 700 ml Preta
+    </h2>
 
-    <b>R$ 69,99</b>
+    <b>
+        R$ 69,99
+    </b>
 
     <p>
         Garrafa térmica em inox, prática, resistente
         e ideal para bebidas quentes ou geladas.
     </p>
 
-    <a href="https://www.asaas.com/c/qrf3el8uhdqecgcm" target="_blank">
+    <a
+        href="https://www.asaas.com/c/qrf3el8uhdqecgcm"
+        target="_blank"
+    >
+
         <button type="button">
             🛍️ COMPRAR AGORA
         </button>
+
     </a>
 
 </div>
@@ -595,19 +1006,28 @@ footer strong {
 
     </div>
 
-    <h2>Garrafa Térmica 700 ml Branca</h2>
+    <h2>
+        Garrafa Térmica 700 ml Branca
+    </h2>
 
-    <b>R$ 69,99</b>
+    <b>
+        R$ 69,99
+    </b>
 
     <p>
         Garrafa térmica prática e elegante
         para acompanhar sua rotina.
     </p>
 
-    <a href="https://www.asaas.com/c/a3ybkpyw0pxz2lr0" target="_blank">
+    <a
+        href="https://www.asaas.com/c/a3ybkpyw0pxz2lr0"
+        target="_blank"
+    >
+
         <button type="button">
             🛍️ COMPRAR AGORA
         </button>
+
     </a>
 
 </div>
@@ -624,19 +1044,28 @@ footer strong {
         alt="Garrafa Térmica Inox 500 ml"
     >
 
-    <h2>Garrafa Térmica Inox 500 ml</h2>
+    <h2>
+        Garrafa Térmica Inox 500 ml
+    </h2>
 
-    <b>R$ 49,99</b>
+    <b>
+        R$ 49,99
+    </b>
 
     <p>
         Garrafa térmica em inox, compacta,
         resistente e fácil de transportar.
     </p>
 
-    <a href="https://www.asaas.com/c/my6e0w2b3h7yshpr" target="_blank">
+    <a
+        href="https://www.asaas.com/c/my6e0w2b3h7yshpr"
+        target="_blank"
+    >
+
         <button type="button">
             🛍️ COMPRAR AGORA
         </button>
+
     </a>
 
 </div>
@@ -653,19 +1082,28 @@ footer strong {
         alt="Garrafa Térmica Inox 500 ml Floral"
     >
 
-    <h2>Garrafa Térmica Inox 500 ml Floral</h2>
+    <h2>
+        Garrafa Térmica Inox 500 ml Floral
+    </h2>
 
-    <b>R$ 49,99</b>
+    <b>
+        R$ 49,99
+    </b>
 
     <p>
         Garrafa térmica em inox com estampa
         floral, prática e elegante.
     </p>
 
-    <a href="https://www.asaas.com/c/hnrv45gn9lp9j32a" target="_blank">
+    <a
+        href="https://www.asaas.com/c/hnrv45gn9lp9j32a"
+        target="_blank"
+    >
+
         <button type="button">
             🛍️ COMPRAR AGORA
         </button>
+
     </a>
 
 </div>
@@ -681,7 +1119,7 @@ footer strong {
 <footer>
 
     <p>
-        <strong>MEU ACHADO</strong>
+        <strong>✨ MEU ACHADO ✨</strong>
     </p>
 
     <p>
@@ -708,4 +1146,5 @@ footer strong {
 
 
 </body>
+
 </html>
