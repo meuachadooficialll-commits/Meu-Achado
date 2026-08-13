@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>MEU ACHADO</title>
 
 <style>
 
-/* =========================
+/* =====================================================
    CONFIGURAÇÕES GERAIS
-   ========================= */
+===================================================== */
 
 * {
     box-sizing: border-box;
@@ -27,193 +24,235 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 
-    /* FUNDO TODO LILÁS */
     background:
-        linear-gradient(
-            135deg,
-            #ead7ff 0%,
-            #d8b4f8 45%,
-            #f3e8ff 100%
+        radial-gradient(
+            circle at top,
+            #4d216d 0%,
+            #321344 45%,
+            #1c0928 100%
         );
 
-    color: #21152b;
+    color: #ffffff;
+
+    min-height: 100vh;
 }
 
 
-/* =========================
+/* =====================================================
    CABEÇALHO
-   ========================= */
+===================================================== */
 
 header {
 
-    text-align: center;
-
-    padding: 45px 20px;
+    width: 100%;
 
     background:
         linear-gradient(
             135deg,
-            #7b3fb5,
-            #9b62d1,
-            #6f329f
+            #2b0d3c,
+            #4b1d69,
+            #2b0d3c
         );
 
-    border-bottom: 5px solid #d4af37;
+    border-bottom: 2px solid #d4af37;
+
+    padding: 28px 15px 22px;
 
     box-shadow:
-        0 8px 25px rgba(70, 30, 100, 0.25);
+        0 5px 25px rgba(0,0,0,0.35);
 
 }
 
-header h1 {
+
+/* LOGO */
+
+.logo {
+
+    text-align: center;
+
+    margin-bottom: 22px;
+
+}
+
+.logo h1 {
 
     margin: 0;
 
-    color: #ffd84d;
+    color: #d4af37;
 
-    font-size: 45px;
+    font-size: clamp(
+        32px,
+        6vw,
+        55px
+    );
 
     letter-spacing: 3px;
 
+    font-weight: 900;
+
     text-shadow:
-        0 2px 8px rgba(0,0,0,0.25);
+        0 2px 8px rgba(0,0,0,0.45);
 
 }
 
-header p {
+.logo p {
 
-    margin-top: 12px;
+    margin: 7px 0 0;
 
-    color: white;
+    color: #eadcff;
 
-    font-size: 18px;
+    font-size: clamp(
+        13px,
+        2vw,
+        17px
+    );
 
 }
 
 
-/* =========================
-   INFORMAÇÕES
-   ========================= */
+/* =====================================================
+   BARRA DE PESQUISA
+===================================================== */
 
-.info-meu-achado {
+.area-pesquisa {
 
-    max-width: 1000px;
+    width: 100%;
 
-    margin: 30px auto;
+    max-width: 850px;
 
-    padding: 28px 20px;
+    margin: auto;
 
-    background:
-        linear-gradient(
-            135deg,
-            #8f51c4,
-            #6e349e
-        );
+    position: relative;
 
-    border: 3px solid #d4af37;
+}
 
-    border-radius: 24px;
+.area-pesquisa input {
 
-    text-align: center;
+    width: 100%;
+
+    height: 52px;
+
+    padding:
+        0 55px 0 20px;
+
+    border-radius: 30px;
+
+    border: 2px solid #d4af37;
+
+    background: #ffffff;
+
+    color: #24102f;
+
+    font-size: 16px;
+
+    outline: none;
 
     box-shadow:
-        0 10px 30px rgba(80, 40, 110, 0.25);
+        0 5px 20px rgba(0,0,0,0.25);
 
 }
 
-.info-meu-achado h2 {
+.area-pesquisa input:focus {
 
-    margin-top: 0;
+    border-color: #f1d36a;
 
-    color: #ffd84d;
-
-    font-size: 28px;
-
-}
-
-.info-item {
-
-    color: white;
-
-    font-size: 17px;
-
-    margin: 14px 0;
-
-    line-height: 1.6;
+    box-shadow:
+        0 0 15px rgba(212,175,55,0.4);
 
 }
 
-.info-item strong {
+.icone-pesquisa {
 
-    color: #ffd84d;
+    position: absolute;
 
-}
+    right: 18px;
 
-.info-item a {
+    top: 50%;
 
-    color: white;
+    transform:
+        translateY(-50%);
 
-    text-decoration: none;
+    font-size: 22px;
 
-    font-weight: bold;
-
-}
-
-.info-item a:hover {
-
-    color: #ffd84d;
+    color: #6d3b8d;
 
 }
 
 
-/* =========================
-   TÍTULO DOS PRODUTOS
-   ========================= */
+/* =====================================================
+   TÍTULO
+===================================================== */
 
 .titulo-produtos {
 
     text-align: center;
 
-    color: #6b3296;
+    padding:
+        30px 15px 10px;
 
-    font-size: 30px;
+}
 
-    margin: 35px 15px 10px;
+.titulo-produtos h2 {
 
-    text-shadow:
-        0 1px 2px rgba(255,255,255,0.8);
+    margin: 0;
+
+    color: #d4af37;
+
+    font-size: clamp(
+        24px,
+        4vw,
+        34px
+    );
+
+}
+
+.titulo-produtos p {
+
+    color: #d9c2e8;
+
+    margin-top: 8px;
 
 }
 
 
-/* =========================
-   GRID DE PRODUTOS
-   ========================= */
+/* =====================================================
+   ÁREA DOS PRODUTOS
+===================================================== */
 
-.produtos-meu-achado {
+.produtos {
+
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    padding:
+        20px clamp(
+            15px,
+            4vw,
+            40px
+        );
 
     display: grid;
 
     grid-template-columns:
         repeat(
             auto-fit,
-            minmax(260px, 1fr)
+            minmax(
+                250px,
+                1fr
+            )
         );
 
     gap: 25px;
 
-    padding: 25px;
-
-    max-width: 1250px;
-
-    margin: auto;
-
 }
 
 
-/* =========================
-   CARD DO PRODUTO
-   ========================= */
+/* =====================================================
+   CARD
+===================================================== */
 
 .produto {
 
@@ -221,23 +260,33 @@ header p {
         linear-gradient(
             180deg,
             #ffffff,
-            #faf3ff
+            #f8efff
         );
 
-    border: 2px solid #d4af37;
+    color: #281332;
 
-    border-radius: 24px;
+    border:
+        2px solid #d4af37;
 
-    padding: 20px;
+    border-radius: 22px;
+
+    padding: 18px;
 
     text-align: center;
 
     box-shadow:
-        0 10px 28px rgba(80, 40, 110, 0.18);
+        0 10px 28px rgba(
+            0,
+            0,
+            0,
+            0.30
+        );
 
     transition:
         transform 0.25s ease,
         box-shadow 0.25s ease;
+
+    overflow: hidden;
 
 }
 
@@ -247,20 +296,23 @@ header p {
         translateY(-7px);
 
     box-shadow:
-        0 16px 35px rgba(80, 40, 110, 0.28);
+        0 18px 38px rgba(
+            0,
+            0,
+            0,
+            0.40
+        );
 
 }
 
 
-/* =========================
+/* =====================================================
    IMAGENS
-   ========================= */
+===================================================== */
 
 .produto img {
 
     width: 100%;
-
-    max-width: 330px;
 
     height: 260px;
 
@@ -268,20 +320,18 @@ header p {
 
     display: block;
 
-    margin: 0 auto 15px;
+    background: #f1e4fa;
 
-    border-radius: 18px;
+    border-radius: 15px;
 
-    background: #f2e4ff;
-
-    border: 1px solid #ead7ff;
+    margin-bottom: 15px;
 
 }
 
 
-/* =========================
+/* =====================================================
    GALERIA
-   ========================= */
+===================================================== */
 
 .galeria {
 
@@ -293,83 +343,88 @@ header p {
 
 }
 
+.galeria img {
 
-/* =========================
-   NOME DO PRODUTO
-   ========================= */
-
-.produto h2 {
-
-    color: #51236f;
-
-    font-size: 20px;
-
-    line-height: 1.3;
-
-    margin: 15px 0 8px;
+    margin-bottom: 0;
 
 }
 
 
-/* =========================
+/* =====================================================
+   NOME
+===================================================== */
+
+.produto h3 {
+
+    color: #512267;
+
+    font-size: 20px;
+
+    line-height: 1.35;
+
+    margin:
+        12px 0 8px;
+
+}
+
+
+/* =====================================================
    PREÇO
-   ========================= */
+===================================================== */
 
-.produto b {
-
-    display: block;
+.preco {
 
     color: #b8860b;
 
     font-size: 27px;
 
-    margin: 10px 0;
+    font-weight: bold;
+
+    margin:
+        10px 0;
 
 }
 
 
-/* =========================
+/* =====================================================
    DESCRIÇÃO
-   ========================= */
+===================================================== */
 
-.produto p {
+.descricao {
 
-    color: #675873;
+    color: #695775;
 
-    line-height: 1.55;
-
-    min-height: 70px;
+    line-height: 1.5;
 
     font-size: 15px;
 
-}
-
-
-/* =========================
-   BOTÃO COMPRAR
-   ========================= */
-
-.produto a {
-
-    text-decoration: none;
+    min-height: 70px;
 
 }
 
-.produto button {
+
+/* =====================================================
+   BOTÃO
+===================================================== */
+
+.botao-comprar {
+
+    display: block;
 
     width: 100%;
 
-    padding: 15px;
+    padding: 14px 10px;
 
-    border: 2px solid #d4af37;
+    border-radius: 12px;
 
-    border-radius: 14px;
+    border:
+        2px solid #d4af37;
 
     background:
         linear-gradient(
             135deg,
-            #6e349e,
-            #8d4fc0
+            #351247,
+            #642a86
         );
 
     color: white;
@@ -378,133 +433,271 @@ header p {
 
     font-weight: bold;
 
+    text-decoration: none;
+
     cursor: pointer;
 
     transition:
-        0.2s ease;
+        all 0.2s ease;
 
 }
 
-.produto button:hover {
+.botao-comprar:hover {
 
     background:
         linear-gradient(
             135deg,
             #d4af37,
-            #f0cf58
+            #f0d166
         );
 
-    color: #30153f;
-
-    transform:
-        scale(1.02);
+    color: #2d103d;
 
 }
 
 
-/* =========================
+/* =====================================================
+   MENSAGEM SEM RESULTADOS
+===================================================== */
+
+.sem-resultados {
+
+    display: none;
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    color: #eadcff;
+
+    font-size: 18px;
+
+}
+
+
+/* =====================================================
    RODAPÉ
-   ========================= */
+===================================================== */
 
 footer {
 
-    margin-top: 35px;
+    margin-top: 40px;
 
-    padding: 30px 15px;
-
-    text-align: center;
+    padding:
+        35px 20px;
 
     background:
         linear-gradient(
             135deg,
-            #6e349e,
-            #8d4fc0,
-            #6e349e
+            #160820,
+            #30113f,
+            #160820
         );
 
-    border-top: 5px solid #d4af37;
+    border-top:
+        3px solid #d4af37;
+
+    text-align: center;
+
+}
+
+footer h2 {
+
+    color: #d4af37;
+
+    margin-top: 0;
+
+    font-size: 28px;
+
+}
+
+.info-rodape {
+
+    max-width: 800px;
+
+    margin:
+        auto;
+
+}
+
+.info-rodape p {
+
+    color: #eadcff;
+
+    margin:
+        12px 0;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+
+}
+
+.info-rodape strong {
+
+    color: #d4af37;
+
+}
+
+.telefone {
 
     color: white;
 
-}
+    text-decoration: none;
 
-footer strong {
-
-    color: #ffd84d;
-
-    font-size: 22px;
+    font-weight: bold;
 
 }
 
-footer p {
+.direitos {
 
-    margin: 9px 0;
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid rgba(
+            212,
+            175,
+            55,
+            0.35
+        );
+
+    color: #bfa8ca;
+
+    font-size: 13px;
 
 }
 
 
-/* =========================
-   CELULAR
-   ========================= */
+/* =====================================================
+   TABLET
+===================================================== */
 
-@media (max-width: 600px) {
+@media (min-width: 600px) and (max-width: 1000px) {
 
-    header {
+    .produtos {
 
-        padding: 35px 15px;
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(
+                    0,
+                    1fr
+                )
+            );
 
-    }
-
-    header h1 {
-
-        font-size: 34px;
-
-    }
-
-    header p {
-
-        font-size: 15px;
-
-    }
-
-    .produtos-meu-achado {
-
-        grid-template-columns: 1fr;
-
-        padding: 15px;
-
-    }
-
-    .produto {
-
-        padding: 18px;
+        gap: 20px;
 
     }
 
     .produto img {
 
-        height: 240px;
-
-    }
-
-    .info-meu-achado {
-
-        margin: 20px 15px;
+        height: 250px;
 
     }
 
 }
 
 
-/* =========================
-   SELEÇÃO DE TEXTO
-   ========================= */
+/* =====================================================
+   COMPUTADOR
+===================================================== */
 
-::selection {
+@media (min-width: 1001px) {
 
-    background: #d4af37;
+    .produtos {
 
-    color: #351546;
+        grid-template-columns:
+            repeat(
+                4,
+                minmax(
+                    0,
+                    1fr
+                )
+            );
+
+    }
+
+}
+
+
+/* =====================================================
+   CELULAR
+===================================================== */
+
+@media (max-width: 599px) {
+
+    header {
+
+        padding:
+            25px 12px 18px;
+
+    }
+
+    .logo h1 {
+
+        letter-spacing:
+            2px;
+
+    }
+
+    .area-pesquisa input {
+
+        height: 50px;
+
+        font-size: 15px;
+
+    }
+
+    .produtos {
+
+        grid-template-columns:
+            1fr;
+
+        padding:
+            15px;
+
+        gap: 20px;
+
+    }
+
+    .produto {
+
+        padding:
+            16px;
+
+    }
+
+    .produto img {
+
+        height:
+            250px;
+
+    }
+
+    .botao-comprar {
+
+        min-height:
+            48px;
+
+    }
+
+}
+
+
+/* =====================================================
+   TELAS MUITO GRANDES
+===================================================== */
+
+@media (min-width: 1600px) {
+
+    .produtos {
+
+        max-width:
+            1500px;
+
+    }
 
 }
 
@@ -516,161 +709,158 @@ footer p {
 <body>
 
 
-<!-- =========================
+<!-- =====================================================
      CABEÇALHO
-     ========================= -->
+===================================================== -->
 
 <header>
 
-    <h1>✨ MEU ACHADO ✨</h1>
+    <div class="logo">
 
-    <p>
-        Produtos incríveis, preços especiais e praticidade para você!
-    </p>
+        <h1>
+            ✨ MEU ACHADO ✨
+        </h1>
+
+        <p>
+            Produtos incríveis para você
+        </p>
+
+    </div>
+
+
+    <!-- BARRA DE PESQUISA -->
+
+    <div class="area-pesquisa">
+
+        <input
+            type="search"
+            id="pesquisa"
+            placeholder="🔎 Pesquisar produto..."
+            autocomplete="off"
+        >
+
+        <span class="icone-pesquisa">
+            🔍
+        </span>
+
+    </div>
 
 </header>
 
 
-<!-- =========================
-     INFORMAÇÕES
-     ========================= -->
+<!-- =====================================================
+     TÍTULO
+===================================================== -->
 
-<section class="info-meu-achado">
+<section class="titulo-produtos">
 
-    <h2>🛍️ MEU ACHADO</h2>
+    <h2>
+        Nossos produtos
+    </h2>
 
-    <div class="info-item">
-
-        📞 <strong>Telefone:</strong>
-
-        <a href="tel:+5527996128074">
-            (27) 99612-8074
-        </a>
-
-    </div>
-
-    <div class="info-item">
-
-        📍 <strong>Endereço:</strong>
-
-        Guarapari – Espírito Santo
-
-    </div>
-
-    <div class="info-item">
-
-        🚚 <strong>Entrega:</strong>
-
-        Para todo o Brasil
-
-    </div>
-
-    <div class="info-item">
-
-        💳 <strong>Pagamento:</strong>
-
-        Pix, cartão e boleto
-
-    </div>
+    <p>
+        Encontre seu próximo achado 💜
+    </p>
 
 </section>
 
 
-<h2 class="titulo-produtos">
-
-    ✨ NOSSOS PRODUTOS ✨
-
-</h2>
-
-
-<!-- =========================
+<!-- =====================================================
      PRODUTOS
-     ========================= -->
+===================================================== -->
 
-<div class="produtos-meu-achado">
+<main>
+
+<div
+    class="produtos"
+    id="listaProdutos"
+>
 
 
-<!-- =========================
+<!-- =====================================================
      1 - APARADOR DE CABELO
-     ========================= -->
+===================================================== -->
 
-<div class="produto">
+<article
+    class="produto"
+    data-nome="aparador de cabelo máquina cortar cabelo hmaston lfj03"
+>
 
     <img
         src="https://raw.githubusercontent.com/meuachadooficialll-commits/Meu-Achado/main/AB68C232-CE00-491C-A378-37F4A4F9BC7F.png"
-        alt="Aparador de Cabelo H'Maston LFJ03"
+        alt="Aparador de cabelo H'Maston LFJ03"
     >
 
-    <h2>
+    <h3>
         Aparador de Cabelo H'Maston LFJ03
-    </h2>
+    </h3>
 
-    <b>
+    <div class="preco">
         R$ 79,99
-    </b>
+    </div>
 
-    <p>
+    <p class="descricao">
         Aparador de cabelo H'Maston LFJ03,
         prático e ideal para cuidados pessoais.
     </p>
 
     <a
+        class="botao-comprar"
         href="https://www.asaas.com/c/eoa88e4fcrdu8gg3"
         target="_blank"
     >
-
-        <button type="button">
-            🛍️ COMPRAR AGORA
-        </button>
-
+        🛍️ COMPRAR AGORA
     </a>
 
-</div>
+</article>
 
 
-<!-- =========================
+<!-- =====================================================
      2 - LANTERNA
-     ========================= -->
+===================================================== -->
 
-<div class="produto">
+<article
+    class="produto"
+    data-nome="lanterna usb hmaston hw02"
+>
 
     <img
         src="https://raw.githubusercontent.com/meuachadooficialll-commits/Meu-Achado/main/136C924A-F99B-4CFB-BE33-D28EA770D833.png"
         alt="Lanterna USB H'Maston HW02"
     >
 
-    <h2>
+    <h3>
         Lanterna USB H'Maston HW02
-    </h2>
+    </h3>
 
-    <b>
+    <div class="preco">
         R$ 30,00
-    </b>
+    </div>
 
-    <p>
+    <p class="descricao">
         Lanterna USB H'Maston HW02,
         compacta, prática e potente.
     </p>
 
     <a
+        class="botao-comprar"
         href="https://www.asaas.com/c/fsjm47sqv1rxzyat"
         target="_blank"
     >
-
-        <button type="button">
-            🛍️ COMPRAR AGORA
-        </button>
-
+        🛍️ COMPRAR AGORA
     </a>
 
-</div>
+</article>
 
 
-<!-- =========================
+<!-- =====================================================
      3 - MINI PROCESSADOR
-     ========================= -->
+===================================================== -->
 
-<div class="produto">
+<article
+    class="produto"
+    data-nome="mini processador tomate srq 016 processador"
+>
 
     <div class="galeria">
 
@@ -686,38 +876,38 @@ footer p {
 
     </div>
 
-    <h2>
+    <h3>
         Mini Processador Tomate SRQ-016
-    </h2>
+    </h3>
 
-    <b>
+    <div class="preco">
         R$ 39,99
-    </b>
+    </div>
 
-    <p>
+    <p class="descricao">
         Mini processador prático para facilitar
         o preparo dos alimentos no dia a dia.
     </p>
 
     <a
+        class="botao-comprar"
         href="https://www.asaas.com/c/v2t8udyrkdpiww4h"
         target="_blank"
     >
-
-        <button type="button">
-            🛍️ COMPRAR AGORA
-        </button>
-
+        🛍️ COMPRAR AGORA
     </a>
 
-</div>
+</article>
 
 
-<!-- =========================
+<!-- =====================================================
      4 - CAIXA DE SOM
-     ========================= -->
+===================================================== -->
 
-<div class="produto">
+<article
+    class="produto"
+    data-nome="caixa de som ipx6 portátil caixa som"
+>
 
     <div class="galeria">
 
@@ -733,123 +923,123 @@ footer p {
 
     </div>
 
-    <h2>
+    <h3>
         Caixa de Som IPX6 Portátil
-    </h2>
+    </h3>
 
-    <b>
+    <div class="preco">
         R$ 79,99
-    </b>
+    </div>
 
-    <p>
+    <p class="descricao">
         Caixa de som portátil com proteção IPX6,
         ideal para ouvir suas músicas em diversos momentos.
     </p>
 
     <a
+        class="botao-comprar"
         href="https://www.asaas.com/c/dt628m98fvqkm2bt"
         target="_blank"
     >
-
-        <button type="button">
-            🛍️ COMPRAR AGORA
-        </button>
-
+        🛍️ COMPRAR AGORA
     </a>
 
-</div>
+</article>
 
 
-<!-- =========================
-     5 - SUPORTE VEICULAR
-     ========================= -->
+<!-- =====================================================
+     5 - SUPORTE
+===================================================== -->
 
-<div class="produto">
+<article
+    class="produto"
+    data-nome="suporte veicular universal suporte celular carro"
+>
 
     <img
         src="https://raw.githubusercontent.com/meuachadooficialll-commits/Meu-Achado/main/IMG_3871.jpeg"
         alt="Suporte Veicular Universal"
     >
 
-    <h2>
+    <h3>
         Suporte Veicular Universal
-    </h2>
+    </h3>
 
-    <b>
+    <div class="preco">
         R$ 39,99
-    </b>
+    </div>
 
-    <p>
+    <p class="descricao">
         Suporte universal para celular no veículo
         com ajuste de ângulo de 360°.
     </p>
 
     <a
+        class="botao-comprar"
         href="https://www.asaas.com/c/m0x24rts81acyv8q"
         target="_blank"
     >
-
-        <button type="button">
-            🛍️ COMPRAR AGORA
-        </button>
-
+        🛍️ COMPRAR AGORA
     </a>
 
-</div>
+</article>
 
 
-<!-- =========================
+<!-- =====================================================
      6 - GARRAFA ANIMAL PRINT
-     ========================= -->
+===================================================== -->
 
-<div class="produto">
+<article
+    class="produto"
+    data-nome="garrafa térmica inox animal print 600 ml"
+>
 
     <div class="galeria">
 
         <img
             src="https://raw.githubusercontent.com/meuachadooficialll-commits/Meu-Achado/main/562C8C12-D4D3-48F9-AB89-BD6FE0ADF0F8.png"
-            alt="Garrafa Térmica Inox Animal Print 600 ml"
+            alt="Garrafa Térmica Animal Print 600 ml"
         >
 
         <img
             src="https://raw.githubusercontent.com/meuachadooficialll-commits/Meu-Achado/main/IMG_3964.png"
-            alt="Garrafa Térmica Inox Animal Print 600 ml"
+            alt="Garrafa Térmica Animal Print 600 ml"
         >
 
     </div>
 
-    <h2>
+    <h3>
         Garrafa Térmica Inox Animal Print 600 ml
-    </h2>
+    </h3>
 
-    <b>
+    <div class="preco">
         R$ 59,99
-    </b>
+    </div>
 
-    <p>
+    <p class="descricao">
         Garrafa térmica em aço inox com estampa
         animal print, prática e elegante.
     </p>
 
     <a
+        class="botao-comprar"
         href="https://www.asaas.com/c/q3kmms6ackkmlffe"
         target="_blank"
     >
-
-        <button type="button">
-            🛍️ COMPRAR AGORA
-        </button>
-
+        🛍️ COMPRAR AGORA
     </a>
 
-</div>
+</article>
 
 
-<!-- =========================
+<!-- =====================================================
      7 - GARRAFA AZUL
-     ========================= -->
+===================================================== -->
 
-<div class="produto">
+<article
+    class="produto"
+    data-nome="garrafa térmica inox azul 600 ml"
+>
 
     <div class="galeria">
 
@@ -865,38 +1055,38 @@ footer p {
 
     </div>
 
-    <h2>
+    <h3>
         Garrafa Térmica Inox Azul 600 ml
-    </h2>
+    </h3>
 
-    <b>
+    <div class="preco">
         R$ 59,99
-    </b>
+    </div>
 
-    <p>
+    <p class="descricao">
         Garrafa térmica em inox com estampa
         de pássaros, ideal para o uso diário.
     </p>
 
     <a
+        class="botao-comprar"
         href="https://www.asaas.com/c/gl2aqbn42d81qmam"
         target="_blank"
     >
-
-        <button type="button">
-            🛍️ COMPRAR AGORA
-        </button>
-
+        🛍️ COMPRAR AGORA
     </a>
 
-</div>
+</article>
 
 
-<!-- =========================
+<!-- =====================================================
      8 - MASSAGEADOR
-     ========================= -->
+===================================================== -->
 
-<div class="produto">
+<article
+    class="produto"
+    data-nome="massageador muscular elétrico ultra potência massageador"
+>
 
     <div class="galeria">
 
@@ -912,239 +1102,344 @@ footer p {
 
     </div>
 
-    <h2>
+    <h3>
         Massageador Muscular Elétrico Ultra Potência
-    </h2>
+    </h3>
 
-    <b>
+    <div class="preco">
         R$ 120,00
-    </b>
+    </div>
 
-    <p>
+    <p class="descricao">
         Massageador muscular elétrico com vibração
         de alta frequência para massagem profunda.
     </p>
 
     <a
+        class="botao-comprar"
         href="https://www.asaas.com/c/1s3c88ucgwcogyu0"
         target="_blank"
     >
-
-        <button type="button">
-            🛍️ COMPRAR AGORA
-        </button>
-
+        🛍️ COMPRAR AGORA
     </a>
 
-</div>
+</article>
 
 
-<!-- =========================
+<!-- =====================================================
      9 - GARRAFA PRETA
-     ========================= -->
+===================================================== -->
 
-<div class="produto">
+<article
+    class="produto"
+    data-nome="garrafa térmica inox preta 700 ml"
+>
 
     <div class="galeria">
 
         <img
             src="https://raw.githubusercontent.com/meuachadooficialll-commits/Meu-Achado/main/86B1EB0D-94CB-4B1A-9EE7-6F435266FF00.png"
-            alt="Garrafa Térmica Inox 700 ml Preta"
+            alt="Garrafa Térmica Inox Preta 700 ml"
         >
 
         <img
             src="https://raw.githubusercontent.com/meuachadooficialll-commits/Meu-Achado/main/IMG_3965.png"
-            alt="Descrição da Garrafa Térmica Inox 700 ml Preta"
+            alt="Descrição da Garrafa Térmica Preta"
         >
 
     </div>
 
-    <h2>
+    <h3>
         Garrafa Térmica Inox 700 ml Preta
-    </h2>
+    </h3>
 
-    <b>
+    <div class="preco">
         R$ 69,99
-    </b>
+    </div>
 
-    <p>
-        Garrafa térmica em inox, prática, resistente
-        e ideal para bebidas quentes ou geladas.
+    <p class="descricao">
+        Garrafa térmica em inox, prática,
+        resistente e ideal para bebidas quentes
+        ou geladas.
     </p>
 
     <a
+        class="botao-comprar"
         href="https://www.asaas.com/c/qrf3el8uhdqecgcm"
         target="_blank"
     >
-
-        <button type="button">
-            🛍️ COMPRAR AGORA
-        </button>
-
+        🛍️ COMPRAR AGORA
     </a>
 
-</div>
+</article>
 
 
-<!-- =========================
+<!-- =====================================================
      10 - GARRAFA BRANCA
-     ========================= -->
+===================================================== -->
 
-<div class="produto">
+<article
+    class="produto"
+    data-nome="garrafa térmica branca 700 ml"
+>
 
     <div class="galeria">
 
         <img
             src="https://raw.githubusercontent.com/meuachadooficialll-commits/Meu-Achado/main/IMG_3963.png"
-            alt="Garrafa Térmica 700 ml Branca"
+            alt="Garrafa Térmica Branca 700 ml"
         >
 
         <img
             src="https://raw.githubusercontent.com/meuachadooficialll-commits/Meu-Achado/main/68DB2E69-1C90-4DAA-91FD-C80229957AD2.png"
-            alt="Garrafa Térmica 700 ml Branca"
+            alt="Garrafa Térmica Branca 700 ml"
         >
 
     </div>
 
-    <h2>
+    <h3>
         Garrafa Térmica 700 ml Branca
-    </h2>
+    </h3>
 
-    <b>
+    <div class="preco">
         R$ 69,99
-    </b>
+    </div>
 
-    <p>
+    <p class="descricao">
         Garrafa térmica prática e elegante
         para acompanhar sua rotina.
     </p>
 
     <a
+        class="botao-comprar"
         href="https://www.asaas.com/c/a3ybkpyw0pxz2lr0"
         target="_blank"
     >
-
-        <button type="button">
-            🛍️ COMPRAR AGORA
-        </button>
-
+        🛍️ COMPRAR AGORA
     </a>
 
-</div>
+</article>
 
 
-<!-- =========================
+<!-- =====================================================
      11 - GARRAFA 500 ML
-     ========================= -->
+===================================================== -->
 
-<div class="produto">
+<article
+    class="produto"
+    data-nome="garrafa térmica inox 500 ml"
+>
 
     <img
         src="https://raw.githubusercontent.com/meuachadooficialll-commits/Meu-Achado/main/638180AC-A8AF-49A3-953A-8B63E75D58D0.png"
         alt="Garrafa Térmica Inox 500 ml"
     >
 
-    <h2>
+    <h3>
         Garrafa Térmica Inox 500 ml
-    </h2>
+    </h3>
 
-    <b>
+    <div class="preco">
         R$ 49,99
-    </b>
+    </div>
 
-    <p>
+    <p class="descricao">
         Garrafa térmica em inox, compacta,
         resistente e fácil de transportar.
     </p>
 
     <a
+        class="botao-comprar"
         href="https://www.asaas.com/c/my6e0w2b3h7yshpr"
         target="_blank"
     >
-
-        <button type="button">
-            🛍️ COMPRAR AGORA
-        </button>
-
+        🛍️ COMPRAR AGORA
     </a>
 
-</div>
+</article>
 
 
-<!-- =========================
+<!-- =====================================================
      12 - GARRAFA FLORAL
-     ========================= -->
+===================================================== -->
 
-<div class="produto">
+<article
+    class="produto"
+    data-nome="garrafa térmica inox 500 ml floral"
+>
 
     <img
         src="https://raw.githubusercontent.com/meuachadooficialll-commits/Meu-Achado/main/D376CF7E-0041-45A8-89C9-50DB7BE8A18C.png"
         alt="Garrafa Térmica Inox 500 ml Floral"
     >
 
-    <h2>
+    <h3>
         Garrafa Térmica Inox 500 ml Floral
-    </h2>
+    </h3>
 
-    <b>
+    <div class="preco">
         R$ 49,99
-    </b>
+    </div>
 
-    <p>
+    <p class="descricao">
         Garrafa térmica em inox com estampa
         floral, prática e elegante.
     </p>
 
     <a
+        class="botao-comprar"
         href="https://www.asaas.com/c/hnrv45gn9lp9j32a"
         target="_blank"
     >
-
-        <button type="button">
-            🛍️ COMPRAR AGORA
-        </button>
-
+        🛍️ COMPRAR AGORA
     </a>
 
-</div>
+</article>
 
 
 </div>
 
 
-<!-- =========================
+<div
+    class="sem-resultados"
+    id="semResultados"
+>
+    😕 Nenhum produto encontrado.
+</div>
+
+</main>
+
+
+<!-- =====================================================
      RODAPÉ
-     ========================= -->
+===================================================== -->
 
 <footer>
 
-    <p>
-        <strong>✨ MEU ACHADO ✨</strong>
-    </p>
+    <h2>
+        ✨ MEU ACHADO ✨
+    </h2>
 
-    <p>
-        📍 Guarapari – Espírito Santo
-    </p>
+    <div class="info-rodape">
 
-    <p>
-        🚚 Entrega para todo o Brasil
-    </p>
+        <p>
+            📞
+            <strong>Telefone:</strong>
+            <a
+                class="telefone"
+                href="tel:+5527996128074"
+            >
+                (27) 99612-8074
+            </a>
+        </p>
 
-    <p>
-        💳 Pix • Cartão • Boleto
-    </p>
+        <p>
+            📍
+            <strong>Endereço:</strong>
+            Guarapari – Espírito Santo
+        </p>
 
-    <p>
-        📞 (27) 99612-8074
-    </p>
+        <p>
+            🚚
+            <strong>Entrega:</strong>
+            Para todo o Brasil
+        </p>
 
-    <p>
-        © 2026 MEU ACHADO — Todos os direitos reservados.
-    </p>
+        <p>
+            💳
+            <strong>Formas de pagamento:</strong>
+            Pix, cartão e boleto
+        </p>
+
+    </div>
+
+    <div class="direitos">
+
+        © 2026 MEU ACHADO —
+        Todos os direitos reservados.
+
+    </div>
 
 </footer>
 
 
-</body>
+<!-- =====================================================
+     PESQUISA
+===================================================== -->
 
+<script>
+
+const pesquisa =
+    document.getElementById("pesquisa");
+
+const produtos =
+    document.querySelectorAll(".produto");
+
+const semResultados =
+    document.getElementById("semResultados");
+
+
+pesquisa.addEventListener(
+    "input",
+    function () {
+
+        const termo =
+            pesquisa.value
+            .toLowerCase()
+            .trim();
+
+        let encontrados = 0;
+
+
+        produtos.forEach(
+            function (produto) {
+
+                const nome =
+                    produto
+                    .getAttribute("data-nome")
+                    .toLowerCase();
+
+                if (
+                    nome.includes(termo)
+                ) {
+
+                    produto.style.display =
+                        "";
+
+                    encontrados++;
+
+                } else {
+
+                    produto.style.display =
+                        "none";
+
+                }
+
+            }
+        );
+
+
+        if (
+            encontrados === 0
+            &&
+            termo !== ""
+        ) {
+
+            semResultados.style.display =
+                "block";
+
+        } else {
+
+            semResultados.style.display =
+                "none";
+
+        }
+
+    }
+);
+
+</script>
+
+
+</body>
 </html>
