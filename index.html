@@ -1,43 +1,100 @@
 <!-- =====================================================
-     MEU ACHADO - CATÁLOGO COMPLETO - PRODUTOS 1 A 12
+     MEU ACHADO - SITE COMPLETO
+     VISUAL PRETO + LILÁS + DOURADO
+     PRODUTOS 1 A 12
      ===================================================== -->
 
 <style>
+
+/* =========================
+   FUNDO GERAL
+   ========================= */
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:
+        radial-gradient(circle at top, #3b1b55 0%, #160d20 35%, #08070b 75%);
+    color: #ffffff;
+}
+
+
+/* =========================
+   CABEÇALHO
+   ========================= */
+
+.meu-achado-topo {
+    text-align: center;
+    padding: 35px 20px 25px;
+    background: linear-gradient(135deg, #0b0910, #24102f, #0b0910);
+    border-bottom: 2px solid #d4af37;
+}
+
+.meu-achado-logo {
+    font-size: 38px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin: 0;
+    color: #ffffff;
+}
+
+.meu-achado-logo span {
+    color: #d4af37;
+}
+
+.meu-achado-subtitulo {
+    margin: 10px 0 0;
+    color: #d9c7e8;
+    font-size: 15px;
+}
+
+
+/* =========================
+   PRODUTOS
+   ========================= */
+
 .produtos-meu-achado {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 22px;
-    padding: 20px;
+    gap: 24px;
+    padding: 30px 20px 50px;
     max-width: 1200px;
     margin: auto;
 }
 
+
+/* =========================
+   CARD
+   ========================= */
+
 .produto {
-    background: #ffffff;
-    border: 1px solid #ead7ff;
-    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(145deg, #ffffff, #f8f1ff);
+    border: 2px solid #d8b4ff;
+    border-radius: 22px;
     padding: 20px;
     text-align: center;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.35),
+        0 0 0 rgba(212,175,55,0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.produto h2 {
-    color: #17131c;
-    font-size: 20px;
-    margin: 10px 0;
+
+/* efeito ao passar o mouse */
+
+.produto:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.45),
+        0 0 25px rgba(212,175,55,0.25);
 }
 
-.produto b {
-    display: block;
-    color: #d4af37;
-    font-size: 25px;
-    margin: 10px 0;
-}
 
-.produto p {
-    color: #6f6878;
-    line-height: 1.5;
-}
+/* =========================
+   IMAGENS
+   ========================= */
 
 .produto img {
     width: 100%;
@@ -46,39 +103,151 @@
     object-fit: contain;
     display: block;
     margin: 0 auto 18px;
-    border-radius: 14px;
-    background: #f8f2ff;
+    border-radius: 16px;
+    background: #f7f0ff;
 }
 
-.produto button {
-    width: 100%;
-    padding: 14px;
-    border: 2px solid #d4af37;
-    border-radius: 12px;
-    background: #0d0b10;
-    color: #ffffff;
+
+/* =========================
+   NOME DO PRODUTO
+   ========================= */
+
+.produto h2 {
+    color: #17131c;
+    font-size: 20px;
+    line-height: 1.3;
+    margin: 12px 0;
+}
+
+
+/* =========================
+   PREÇO
+   ========================= */
+
+.produto b {
+    display: block;
+    color: #b28a00;
+    font-size: 27px;
+    font-weight: 900;
+    margin: 12px 0;
+}
+
+
+/* =========================
+   DESCRIÇÃO
+   ========================= */
+
+.produto p {
+    color: #62596c;
+    line-height: 1.6;
     font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
+    min-height: 70px;
 }
 
-.produto button:hover {
-    background: #d4af37;
-    color: #0d0b10;
-}
+
+/* =========================
+   BOTÃO COMPRAR
+   ========================= */
 
 .produto a {
     text-decoration: none;
 }
+
+.produto button {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #d4af37;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #0b0910, #21132a);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.produto button:hover {
+    background: linear-gradient(135deg, #d4af37, #f2d675);
+    color: #0d0b10;
+    transform: scale(1.02);
+}
+
+
+/* =========================
+   RODAPÉ
+   ========================= */
+
+.meu-achado-rodape {
+    text-align: center;
+    padding: 30px 20px;
+    background: #08070b;
+    border-top: 2px solid #d4af37;
+    color: #cdbbdd;
+    font-size: 14px;
+}
+
+.meu-achado-rodape strong {
+    color: #d4af37;
+}
+
+
+/* =========================
+   CELULAR
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .meu-achado-logo {
+        font-size: 30px;
+    }
+
+    .meu-achado-subtitulo {
+        font-size: 14px;
+    }
+
+    .produtos-meu-achado {
+        grid-template-columns: 1fr;
+        padding: 20px 14px 40px;
+    }
+
+    .produto {
+        padding: 18px;
+    }
+
+    .produto img {
+        height: 240px;
+    }
+
+}
+
 </style>
 
+
+<!-- =========================
+     CABEÇALHO
+     ========================= -->
+
+<header class="meu-achado-topo">
+
+    <h1 class="meu-achado-logo">
+        MEU <span>ACHADO</span>
+    </h1>
+
+    <p class="meu-achado-subtitulo">
+        ✨ Produtos incríveis, escolhidos para você ✨
+    </p>
+
+</header>
+
+
+<!-- =========================
+     PRODUTOS
+     ========================= -->
 
 <div class="produtos-meu-achado">
 
 
-<!-- =====================================================
-     1 - LANTERNA
-     ===================================================== -->
+<!-- 1 - LANTERNA -->
 
 <div class="produto">
 
@@ -96,20 +265,20 @@
         compacta e ideal para diferentes situações.
     </p>
 
-    <a
-        href="https://www.asaas.com/c/fsjm47sqv1rxzyat"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        <button type="button">🛍️ COMPRAR AGORA</button>
+    <a href="https://www.asaas.com/c/fsjm47sqv1rxzyat"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        <button type="button">
+            🛍️ COMPRAR AGORA
+        </button>
+
     </a>
 
 </div>
 
 
-<!-- =====================================================
-     2 - APARADOR DE CABELO
-     ===================================================== -->
+<!-- 2 - APARADOR -->
 
 <div class="produto">
 
@@ -127,20 +296,20 @@
         prático para cuidados pessoais.
     </p>
 
-    <a
-        href="https://www.asaas.com/c/eoa88e4fcrdu8gg3"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        <button type="button">🛍️ COMPRAR AGORA</button>
+    <a href="https://www.asaas.com/c/eoa88e4fcrdu8gg3"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        <button type="button">
+            🛍️ COMPRAR AGORA
+        </button>
+
     </a>
 
 </div>
 
 
-<!-- =====================================================
-     3 - MINI PROCESSADOR
-     ===================================================== -->
+<!-- 3 - MINI PROCESSADOR -->
 
 <div class="produto">
 
@@ -151,7 +320,7 @@
 
     <img
         src="https://raw.githubusercontent.com/meuachadooficialll-commits/Meu-Achado/main/B4943C49-F4CB-4F85-8B62-43FF59BAAB57.png"
-        alt="Informações do Mini Processador Tomate SRQ-016"
+        alt="Informações do Mini Processador"
     >
 
     <h2>Mini Processador Tomate SRQ-016</h2>
@@ -160,24 +329,23 @@
 
     <p>
         Mini processador compacto e prático,
-        ideal para facilitar o preparo dos alimentos
-        no dia a dia.
+        ideal para facilitar o preparo dos alimentos.
     </p>
 
-    <a
-        href="https://www.asaas.com/c/v2t8udyrkdpiww4h"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        <button type="button">🛍️ COMPRAR AGORA</button>
+    <a href="https://www.asaas.com/c/v2t8udyrkdpiww4h"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        <button type="button">
+            🛍️ COMPRAR AGORA
+        </button>
+
     </a>
 
 </div>
 
 
-<!-- =====================================================
-     4 - CAIXA DE SOM
-     ===================================================== -->
+<!-- 4 - CAIXA DE SOM -->
 
 <div class="produto">
 
@@ -188,7 +356,7 @@
 
     <img
         src="https://raw.githubusercontent.com/meuachadooficialll-commits/Meu-Achado/main/0D1A0105-7965-467F-9D44-05C4A556F05B.png"
-        alt="Informações da Caixa de Som Portátil IPX6"
+        alt="Informações da Caixa de Som"
     >
 
     <h2>Caixa de Som Portátil IPX6</h2>
@@ -200,20 +368,20 @@
         prática para levar para diferentes ambientes.
     </p>
 
-    <a
-        href="https://www.asaas.com/c/dt628m98fvqkm2bt"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        <button type="button">🛍️ COMPRAR AGORA</button>
+    <a href="https://www.asaas.com/c/dt628m98fvqkm2bt"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        <button type="button">
+            🛍️ COMPRAR AGORA
+        </button>
+
     </a>
 
 </div>
 
 
-<!-- =====================================================
-     5 - SUPORTE VEICULAR
-     ===================================================== -->
+<!-- 5 - SUPORTE -->
 
 <div class="produto">
 
@@ -231,31 +399,31 @@
         prático e com ajuste de ângulo de 360°.
     </p>
 
-    <a
-        href="https://www.asaas.com/c/m0x24rts81acyv8q"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        <button type="button">🛍️ COMPRAR AGORA</button>
+    <a href="https://www.asaas.com/c/m0x24rts81acyv8q"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        <button type="button">
+            🛍️ COMPRAR AGORA
+        </button>
+
     </a>
 
 </div>
 
 
-<!-- =====================================================
-     6 - GARRAFA ANIMAL PRINT
-     ===================================================== -->
+<!-- 6 - ANIMAL PRINT -->
 
 <div class="produto">
 
     <img
         src="https://raw.githubusercontent.com/meuachadooficialll-commits/Meu-Achado/main/562C8C12-D4D3-48F9-AB89-BD6FE0ADF0F8.png"
-        alt="Garrafa Térmica Inox Animal Print 600 ml"
+        alt="Garrafa Animal Print 600 ml"
     >
 
     <img
         src="https://raw.githubusercontent.com/meuachadooficialll-commits/Meu-Achado/main/IMG_3964.png"
-        alt="Informações da Garrafa Térmica Inox Animal Print 600 ml"
+        alt="Informações da Garrafa Animal Print"
     >
 
     <h2>Garrafa Térmica Inox Animal Print 600 ml</h2>
@@ -267,20 +435,20 @@
         animal print, prática e elegante.
     </p>
 
-    <a
-        href="https://www.asaas.com/c/q3kmms6ackkmlffe"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        <button type="button">🛍️ COMPRAR AGORA</button>
+    <a href="https://www.asaas.com/c/q3kmms6ackkmlffe"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        <button type="button">
+            🛍️ COMPRAR AGORA
+        </button>
+
     </a>
 
 </div>
 
 
-<!-- =====================================================
-     7 - GARRAFA AZUL
-     ===================================================== -->
+<!-- 7 - AZUL -->
 
 <div class="produto">
 
@@ -291,7 +459,7 @@
 
     <img
         src="https://raw.githubusercontent.com/meuachadooficialll-commits/Meu-Achado/main/46BEE78B-5067-4010-9C5A-605896C86CBD.png"
-        alt="Informações da Garrafa Térmica Inox Azul 600 ml"
+        alt="Informações da Garrafa Azul"
     >
 
     <h2>Garrafa Térmica Inox Azul 600 ml</h2>
@@ -303,31 +471,31 @@
         pássaros, ideal para o uso diário.
     </p>
 
-    <a
-        href="https://www.asaas.com/c/gl2aqbn42d81qmam"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        <button type="button">🛍️ COMPRAR AGORA</button>
+    <a href="https://www.asaas.com/c/gl2aqbn42d81qmam"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        <button type="button">
+            🛍️ COMPRAR AGORA
+        </button>
+
     </a>
 
 </div>
 
 
-<!-- =====================================================
-     8 - MASSAGEADOR
-     ===================================================== -->
+<!-- 8 - MASSAGEADOR -->
 
 <div class="produto">
 
     <img
         src="https://raw.githubusercontent.com/meuachadooficialll-commits/Meu-Achado/main/456243BE-B4DC-4C86-A688-8EA92C032A78.png"
-        alt="Massageador Muscular Elétrico Ultra Potência"
+        alt="Massageador Muscular Elétrico"
     >
 
     <img
         src="https://raw.githubusercontent.com/meuachadooficialll-commits/Meu-Achado/main/AC2384EE-7E39-41A5-901D-52EA17AC51E9.png"
-        alt="Informações do Massageador Muscular Elétrico"
+        alt="Informações do Massageador"
     >
 
     <h2>Massageador Muscular Elétrico Ultra Potência</h2>
@@ -339,20 +507,20 @@
         de alta frequência para massagem profunda.
     </p>
 
-    <a
-        href="https://www.asaas.com/c/1s3c88ucgwcogyu0"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        <button type="button">🛍️ COMPRAR AGORA</button>
+    <a href="https://www.asaas.com/c/1s3c88ucgwcogyu0"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        <button type="button">
+            🛍️ COMPRAR AGORA
+        </button>
+
     </a>
 
 </div>
 
 
-<!-- =====================================================
-     9 - GARRAFA PRETA
-     ===================================================== -->
+<!-- 9 - PRETA -->
 
 <div class="produto">
 
@@ -363,7 +531,7 @@
 
     <img
         src="https://raw.githubusercontent.com/meuachadooficialll-commits/Meu-Achado/main/IMG_3965.png"
-        alt="Informações da Garrafa Térmica Inox 700 ml Preta"
+        alt="Informações da Garrafa Preta"
     >
 
     <h2>Garrafa Térmica Inox 700 ml Preta</h2>
@@ -375,20 +543,20 @@
         e ideal para bebidas quentes ou geladas.
     </p>
 
-    <a
-        href="https://www.asaas.com/c/qrf3el8uhdqecgcm"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        <button type="button">🛍️ COMPRAR AGORA</button>
+    <a href="https://www.asaas.com/c/qrf3el8uhdqecgcm"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        <button type="button">
+            🛍️ COMPRAR AGORA
+        </button>
+
     </a>
 
 </div>
 
 
-<!-- =====================================================
-     10 - GARRAFA BRANCA
-     ===================================================== -->
+<!-- 10 - BRANCA -->
 
 <div class="produto">
 
@@ -399,7 +567,7 @@
 
     <img
         src="https://raw.githubusercontent.com/meuachadooficialll-commits/Meu-Achado/main/68DB2E69-1C90-4DAA-91FD-C80229957AD2.png"
-        alt="Informações da Garrafa Térmica 700 ml Branca"
+        alt="Informações da Garrafa Branca"
     >
 
     <h2>Garrafa Térmica 700 ml Branca</h2>
@@ -411,20 +579,20 @@
         para acompanhar sua rotina.
     </p>
 
-    <a
-        href="https://www.asaas.com/c/a3ybkpyw0pxz2lr0"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        <button type="button">🛍️ COMPRAR AGORA</button>
+    <a href="https://www.asaas.com/c/a3ybkpyw0pxz2lr0"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        <button type="button">
+            🛍️ COMPRAR AGORA
+        </button>
+
     </a>
 
 </div>
 
 
-<!-- =====================================================
-     11 - GARRAFA INOX 500 ML
-     ===================================================== -->
+<!-- 11 - 500 ML -->
 
 <div class="produto">
 
@@ -442,20 +610,20 @@
         resistente e fácil de transportar.
     </p>
 
-    <a
-        href="https://www.asaas.com/c/my6e0w2b3h7yshpr"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        <button type="button">🛍️ COMPRAR AGORA</button>
+    <a href="https://www.asaas.com/c/my6e0w2b3h7yshpr"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        <button type="button">
+            🛍️ COMPRAR AGORA
+        </button>
+
     </a>
 
 </div>
 
 
-<!-- =====================================================
-     12 - GARRAFA FLORAL 500 ML
-     ===================================================== -->
+<!-- 12 - FLORAL -->
 
 <div class="produto">
 
@@ -473,15 +641,32 @@
         floral, prática e elegante.
     </p>
 
-    <a
-        href="https://www.asaas.com/c/hnrv45gn9lp9j32a"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        <button type="button">🛍️ COMPRAR AGORA</button>
+    <a href="https://www.asaas.com/c/hnrv45gn9lp9j32a"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        <button type="button">
+            🛍️ COMPRAR AGORA
+        </button>
+
     </a>
 
 </div>
 
 
 </div>
+
+
+<!-- =========================
+     RODAPÉ
+     ========================= -->
+
+<footer class="meu-achado-rodape">
+
+    <strong>MEU ACHADO</strong>
+
+    <br><br>
+
+    ✨ Encontre seu próximo achado aqui! ✨
+
+</footer>
