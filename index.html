@@ -8,12 +8,20 @@
 <meta name="viewport"
       content="width=device-width, initial-scale=1.0">
 
-<title>MEU ACHADO</title>
+<title>MEU ACHADO | Achados incríveis</title>
 
 <style>
 
+/* =====================================================
+   CONFIGURAÇÃO GERAL
+   ===================================================== */
+
 * {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -23,109 +31,205 @@ body {
     color: white;
 }
 
-/* =========================
-   TOPO
-   ========================= */
+
+/* =====================================================
+   CABEÇALHO
+   ===================================================== */
 
 .meu-topo {
+
     text-align: center;
+
     padding: 38px 20px 30px;
 
     background:
         radial-gradient(
             circle at top,
-            #5b2878 0%,
-            #24112f 35%,
+            #6b2d8c 0%,
+            #321442 35%,
             #09070d 80%
         );
 
     border-bottom: 2px solid #d4af37;
+
 }
 
 .meu-logo {
+
     margin: 0;
 
-    font-size: 42px;
+    font-size: 44px;
 
     font-weight: 900;
 
-    letter-spacing: 2px;
+    letter-spacing: 3px;
+
 }
 
 .meu-logo span {
+
     color: #d4af37;
+
 }
 
 .meu-slogan {
+
     margin: 10px 0 0;
 
     color: #eadcf5;
 
     font-size: 16px;
+
 }
 
 
-/* =========================
-   DESTAQUE
-   ========================= */
+/* =====================================================
+   BANNER PRINCIPAL
+   ===================================================== */
 
 .meu-destaque {
+
     max-width: 1100px;
 
-    margin: 25px auto 10px;
+    margin: 25px auto;
 
-    padding: 30px 20px;
+    padding: 35px 20px;
 
     text-align: center;
 
-    border-radius: 24px;
+    border-radius: 25px;
 
     background:
         linear-gradient(
             135deg,
-            #2b1239,
-            #120d17
+            #351344,
+            #120c17
         );
 
-    border: 1px solid #8d5bb0;
+    border: 1px solid #9b62bc;
 
     box-shadow:
-        0 10px 35px rgba(0,0,0,.35);
+        0 10px 35px rgba(0,0,0,.4);
+
 }
 
 .meu-destaque h2 {
-    margin: 0 0 10px;
 
-    color: white;
+    margin: 0 0 12px;
 
-    font-size: 27px;
+    font-size: 30px;
+
 }
 
 .meu-destaque p {
-    margin: 0;
 
-    color: #d9c7e8;
+    margin: 8px 0;
+
+    color: #dfcce9;
+
+    font-size: 16px;
+
 }
 
 
-/* =========================
-   PESQUISA
-   ========================= */
+/* =====================================================
+   INFORMAÇÕES RÁPIDAS
+   ===================================================== */
 
-.meu-pesquisa {
-    max-width: 650px;
+.info-loja {
 
-    margin: 25px auto 15px;
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(220px, 1fr)
+        );
+
+    gap: 15px;
+
+    max-width: 1100px;
+
+    margin: 20px auto;
 
     padding: 0 20px;
+
+}
+
+.info-card {
+
+    padding: 18px;
+
+    text-align: center;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #1c1223,
+            #0f0b13
+        );
+
+    border: 1px solid #6d4383;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.3);
+
+}
+
+.info-card .icone {
+
+    display: block;
+
+    font-size: 30px;
+
+    margin-bottom: 8px;
+
+}
+
+.info-card strong {
+
+    display: block;
+
+    color: #d4af37;
+
+    font-size: 16px;
+
+    margin-bottom: 5px;
+
+}
+
+.info-card span {
+
+    color: #d8c7df;
+
+    font-size: 14px;
+
+}
+
+
+/* =====================================================
+   PESQUISA
+   ===================================================== */
+
+.meu-pesquisa {
+
+    max-width: 650px;
+
+    margin: 30px auto 15px;
+
+    padding: 0 20px;
+
 }
 
 .meu-pesquisa input {
+
     width: 100%;
 
     padding: 17px 20px;
 
-    border-radius: 15px;
+    border-radius: 16px;
 
     border: 2px solid #8d5bb0;
 
@@ -136,22 +240,26 @@ body {
     font-size: 16px;
 
     outline: none;
+
 }
 
 .meu-pesquisa input:focus {
+
     border-color: #d4af37;
 
     box-shadow:
-        0 0 15px
-        rgba(212,175,55,.25);
+        0 0 18px
+        rgba(212,175,55,.3);
+
 }
 
 
-/* =========================
+/* =====================================================
    CATEGORIAS
-   ========================= */
+   ===================================================== */
 
 .meu-categorias {
+
     display: flex;
 
     flex-wrap: wrap;
@@ -162,12 +270,14 @@ body {
 
     max-width: 1100px;
 
-    margin: 15px auto 25px;
+    margin: 15px auto 30px;
 
     padding: 0 15px;
+
 }
 
 .meu-categorias button {
+
     border: 1px solid #d4af37;
 
     border-radius: 30px;
@@ -182,22 +292,27 @@ body {
 
     cursor: pointer;
 
-    transition: .2s;
+    transition: .25s;
+
 }
 
 .meu-categorias button:hover,
+
 .meu-categorias button.ativo {
+
     background: #d4af37;
 
     color: #0d0b10;
+
 }
 
 
-/* =========================
+/* =====================================================
    PRODUTOS
-   ========================= */
+   ===================================================== */
 
 .produtos-meu-achado {
+
     display: grid;
 
     grid-template-columns:
@@ -208,14 +323,18 @@ body {
 
     gap: 24px;
 
-    padding: 10px 20px 50px;
+    padding: 10px 20px 60px;
 
     max-width: 1200px;
 
     margin: auto;
+
 }
 
 .produto {
+
+    position: relative;
+
     background:
         linear-gradient(
             145deg,
@@ -238,9 +357,11 @@ body {
     transition:
         transform .25s,
         box-shadow .25s;
+
 }
 
 .produto:hover {
+
     transform: translateY(-6px);
 
     box-shadow:
@@ -248,9 +369,11 @@ body {
         rgba(0,0,0,.45),
         0 0 25px
         rgba(212,175,55,.25);
+
 }
 
 .produto img {
+
     width: 100%;
 
     max-width: 330px;
@@ -266,9 +389,11 @@ body {
     border-radius: 15px;
 
     background: #f7f0ff;
+
 }
 
 .produto h2 {
+
     color: #17131c;
 
     font-size: 20px;
@@ -276,9 +401,11 @@ body {
     line-height: 1.3;
 
     margin: 12px 0;
+
 }
 
 .produto b {
+
     display: block;
 
     color: #b28a00;
@@ -288,64 +415,32 @@ body {
     font-weight: 900;
 
     margin: 12px 0;
+
 }
 
 .produto p {
+
     color: #62596c;
 
     line-height: 1.55;
 
     min-height: 65px;
+
 }
 
 .produto a {
+
     text-decoration: none;
-}
 
-.produto button {
-    width: 100%;
-
-    padding: 15px;
-
-    border: 2px solid #d4af37;
-
-    border-radius: 14px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #0b0910,
-            #291336
-        );
-
-    color: white;
-
-    font-size: 15px;
-
-    font-weight: 900;
-
-    cursor: pointer;
-
-    transition: .25s;
-}
-
-.produto button:hover {
-    background:
-        linear-gradient(
-            135deg,
-            #d4af37,
-            #f1d36b
-        );
-
-    color: #0d0b10;
 }
 
 
-/* =========================
-   ETIQUETA
-   ========================= */
+/* =====================================================
+   ETIQUETAS
+   ===================================================== */
 
 .etiqueta {
+
     display: inline-block;
 
     margin-bottom: 12px;
@@ -361,14 +456,89 @@ body {
     font-size: 12px;
 
     font-weight: 900;
+
 }
 
 
-/* =========================
+/* =====================================================
+   BOTÕES
+   ===================================================== */
+
+.botao-comprar,
+
+.botao-carrinho-produto {
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin-top: 8px;
+
+    border-radius: 13px;
+
+    font-size: 14px;
+
+    font-weight: 900;
+
+    cursor: pointer;
+
+    transition: .25s;
+
+}
+
+.botao-comprar {
+
+    border: 2px solid #d4af37;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0b0910,
+            #291336
+        );
+
+    color: white;
+
+}
+
+.botao-comprar:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #d4af37,
+            #f1d36b
+        );
+
+    color: #0d0b10;
+
+}
+
+.botao-carrinho-produto {
+
+    border: 2px solid #8d5bb0;
+
+    background: #f1e6f8;
+
+    color: #291336;
+
+}
+
+.botao-carrinho-produto:hover {
+
+    background: #8d5bb0;
+
+    color: white;
+
+}
+
+
+/* =====================================================
    CARRINHO
-   ========================= */
+   ===================================================== */
 
 #botaoCarrinho {
+
     position: fixed;
 
     right: 18px;
@@ -401,9 +571,11 @@ body {
     box-shadow:
         0 8px 25px
         rgba(0,0,0,.5);
+
 }
 
 #contadorCarrinho {
+
     display: inline-flex;
 
     align-items: center;
@@ -423,14 +595,16 @@ body {
     color: white;
 
     font-size: 12px;
+
 }
 
 
-/* =========================
-   JANELA DO CARRINHO
-   ========================= */
+/* =====================================================
+   JANELA CARRINHO
+   ===================================================== */
 
 #janelaCarrinho {
+
     display: none;
 
     position: fixed;
@@ -460,9 +634,11 @@ body {
         rgba(0,0,0,.6);
 
     overflow: hidden;
+
 }
 
 .carrinho-topo {
+
     display: flex;
 
     justify-content: space-between;
@@ -477,15 +653,19 @@ body {
             #17101d,
             #351747
         );
+
 }
 
 .carrinho-topo h3 {
+
     margin: 0;
 
     color: white;
+
 }
 
 .fechar-carrinho {
+
     border: none;
 
     background: none;
@@ -495,30 +675,31 @@ body {
     font-size: 27px;
 
     cursor: pointer;
+
 }
 
-
-/* =========================
-   LISTA CARRINHO
-   ========================= */
-
 #listaCarrinho {
+
     max-height: 45vh;
 
     overflow-y: auto;
 
     padding: 12px;
+
 }
 
 .carrinho-vazio {
+
     padding: 35px 15px;
 
     text-align: center;
 
     color: #6f6878;
+
 }
 
 .item-carrinho {
+
     display: grid;
 
     grid-template-columns: 65px 1fr;
@@ -528,9 +709,11 @@ body {
     padding: 12px 5px;
 
     border-bottom: 1px solid #ead7ff;
+
 }
 
 .item-carrinho img {
+
     width: 65px;
 
     height: 65px;
@@ -540,9 +723,11 @@ body {
     border-radius: 10px;
 
     background: #f8f2ff;
+
 }
 
 .item-carrinho strong {
+
     display: block;
 
     color: #17131c;
@@ -550,15 +735,19 @@ body {
     font-size: 14px;
 
     margin-bottom: 5px;
+
 }
 
 .item-preco {
+
     color: #b28a00;
 
     font-weight: 900;
+
 }
 
 .controles {
+
     display: flex;
 
     align-items: center;
@@ -566,9 +755,11 @@ body {
     gap: 7px;
 
     margin-top: 7px;
+
 }
 
 .controles button {
+
     width: 28px;
 
     height: 28px;
@@ -586,26 +777,27 @@ body {
     cursor: pointer;
 
     font-weight: bold;
+
 }
 
 .controles .remover {
+
     background: #7b3fa0;
+
 }
 
-
-/* =========================
-   RODAPÉ CARRINHO
-   ========================= */
-
 .carrinho-rodape {
+
     padding: 15px;
 
     border-top: 1px solid #ead7ff;
 
     background: #faf7fc;
+
 }
 
 .total {
+
     display: flex;
 
     justify-content: space-between;
@@ -619,15 +811,19 @@ body {
     font-size: 18px;
 
     font-weight: 900;
+
 }
 
 .total strong {
+
     color: #b28a00;
 
     font-size: 22px;
+
 }
 
 .botao-finalizar {
+
     width: 100%;
 
     padding: 14px;
@@ -643,73 +839,184 @@ body {
     font-weight: 900;
 
     cursor: pointer;
+
 }
 
-.botao-finalizar:hover {
+
+/* =====================================================
+   CONTATO
+   ===================================================== */
+
+.contato-loja {
+
+    max-width: 1100px;
+
+    margin: 10px auto 30px;
+
+    padding: 30px 20px;
+
+    text-align: center;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #291336,
+            #110b14
+        );
+
+    border: 1px solid #8d5bb0;
+
+}
+
+.contato-loja h2 {
+
+    margin-top: 0;
+
+    color: white;
+
+    font-size: 27px;
+
+}
+
+.contato-loja p {
+
+    color: #dfcce9;
+
+    line-height: 1.6;
+
+}
+
+.whatsapp {
+
+    display: inline-block;
+
+    margin-top: 12px;
+
+    padding: 14px 24px;
+
+    border-radius: 30px;
+
     background: #d4af37;
 
     color: #0d0b10;
+
+    text-decoration: none;
+
+    font-weight: 900;
+
+    transition: .25s;
+
+}
+
+.whatsapp:hover {
+
+    transform: scale(1.04);
+
+    background: #f1d36b;
+
 }
 
 
-/* =========================
-   RODAPÉ SITE
-   ========================= */
+/* =====================================================
+   RODAPÉ
+   ===================================================== */
 
 .meu-rodape {
+
     text-align: center;
 
-    padding: 30px 20px;
+    padding: 35px 20px;
 
     background: #050408;
 
     border-top: 2px solid #d4af37;
 
     color: #cdbbdd;
+
+    line-height: 1.7;
+
 }
 
 .meu-rodape strong {
+
     color: #d4af37;
+
+    font-size: 20px;
+
+}
+
+.meios-pagamento {
+
+    margin-top: 15px;
+
+    color: #eadcf5;
+
 }
 
 
-/* =========================
+/* =====================================================
    CELULAR
-   ========================= */
+   ===================================================== */
 
 @media (max-width: 600px) {
 
     .meu-logo {
+
         font-size: 32px;
+
     }
 
     .meu-destaque {
+
         margin: 20px 14px;
+
+        padding: 28px 15px;
+
     }
 
     .meu-destaque h2 {
+
         font-size: 23px;
+
+    }
+
+    .info-loja {
+
+        grid-template-columns: 1fr;
+
+        padding: 0 14px;
+
     }
 
     .produtos-meu-achado {
+
         grid-template-columns: 1fr;
 
         padding:
             10px 14px 40px;
+
     }
 
     .produto img {
+
         height: 240px;
+
     }
 
     .meu-categorias {
+
         gap: 8px;
+
     }
 
     .meu-categorias button {
+
         font-size: 13px;
 
         padding: 9px 13px;
+
     }
 
 }
@@ -718,12 +1025,13 @@ body {
 
 </head>
 
+
 <body>
 
 
-<!-- =========================
-     CABEÇALHO
-     ========================= -->
+<!-- =====================================================
+     TOPO
+     ===================================================== -->
 
 <header class="meu-topo">
 
@@ -738,14 +1046,14 @@ body {
 </header>
 
 
-<!-- =========================
+<!-- =====================================================
      DESTAQUE
-     ========================= -->
+     ===================================================== -->
 
 <section class="meu-destaque">
 
     <h2>
-        ✨ Encontre seu próximo achado
+        🛍️ Encontre seu próximo achado
     </h2>
 
     <p>
@@ -753,12 +1061,76 @@ body {
         para você.
     </p>
 
+    <p>
+        🚚 Entrega para todo o Brasil
+    </p>
+
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
+     INFORMAÇÕES DA LOJA
+     ===================================================== -->
+
+<section class="info-loja">
+
+    <div class="info-card">
+
+        <span class="icone">🚚</span>
+
+        <strong>ENTREGA</strong>
+
+        <span>
+            Entrega para todo o Brasil
+        </span>
+
+    </div>
+
+
+    <div class="info-card">
+
+        <span class="icone">💳</span>
+
+        <strong>PAGAMENTO</strong>
+
+        <span>
+            Pix, cartão e boleto
+        </span>
+
+    </div>
+
+
+    <div class="info-card">
+
+        <span class="icone">📍</span>
+
+        <strong>LOCALIZAÇÃO</strong>
+
+        <span>
+            Guarapari - Espírito Santo
+        </span>
+
+    </div>
+
+
+    <div class="info-card">
+
+        <span class="icone">📱</span>
+
+        <strong>ATENDIMENTO</strong>
+
+        <span>
+            (27) 9 9612-9074
+        </span>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
      PESQUISA
-     ========================= -->
+     ===================================================== -->
 
 <div class="meu-pesquisa">
 
@@ -772,9 +1144,9 @@ body {
 </div>
 
 
-<!-- =========================
+<!-- =====================================================
      CATEGORIAS
-     ========================= -->
+     ===================================================== -->
 
 <div class="meu-categorias">
 
@@ -825,9 +1197,9 @@ body {
 <div class="produtos-meu-achado">
 
 
-<!-- =========================
+<!-- =====================================================
      1 - LANTERNA
-     ========================= -->
+     ===================================================== -->
 
 <div class="produto"
      data-categoria="acessorios">
@@ -859,14 +1231,14 @@ href="https://www.asaas.com/c/fsjm47sqv1rxzyat"
 target="_blank"
 rel="noopener noreferrer">
 
-<button>
+<button class="botao-comprar">
 🛍️ COMPRAR AGORA
 </button>
 
 </a>
 
 <button
-type="button"
+class="botao-carrinho-produto"
 onclick="adicionarCarrinho(
 'Lanterna USB H’Maston HW02',
 30,
@@ -880,9 +1252,9 @@ onclick="adicionarCarrinho(
 </div>
 
 
-<!-- =========================
+<!-- =====================================================
      2 - APARADOR
-     ========================= -->
+     ===================================================== -->
 
 <div class="produto"
      data-categoria="beleza">
@@ -913,14 +1285,14 @@ href="https://www.asaas.com/c/eoa88e4fcrdu8gg3"
 target="_blank"
 rel="noopener noreferrer">
 
-<button>
+<button class="botao-comprar">
 🛍️ COMPRAR AGORA
 </button>
 
 </a>
 
 <button
-type="button"
+class="botao-carrinho-produto"
 onclick="adicionarCarrinho(
 'Aparador de Cabelo H’Maston LFJ03',
 79.99,
@@ -934,9 +1306,9 @@ onclick="adicionarCarrinho(
 </div>
 
 
-<!-- =========================
-     3 - PROCESSADOR
-     ========================= -->
+<!-- =====================================================
+     3 - MINI PROCESSADOR
+     ===================================================== -->
 
 <div class="produto"
      data-categoria="casa">
@@ -972,14 +1344,14 @@ href="https://www.asaas.com/c/v2t8udyrkdpiww4h"
 target="_blank"
 rel="noopener noreferrer">
 
-<button>
+<button class="botao-comprar">
 🛍️ COMPRAR AGORA
 </button>
 
 </a>
 
 <button
-type="button"
+class="botao-carrinho-produto"
 onclick="adicionarCarrinho(
 'Mini Processador Tomate SRQ-016',
 39.99,
@@ -993,9 +1365,9 @@ onclick="adicionarCarrinho(
 </div>
 
 
-<!-- =========================
+<!-- =====================================================
      4 - CAIXA DE SOM
-     ========================= -->
+     ===================================================== -->
 
 <div class="produto"
      data-categoria="eletronicos">
@@ -1031,14 +1403,14 @@ href="https://www.asaas.com/c/dt628m98fvqkm2bt"
 target="_blank"
 rel="noopener noreferrer">
 
-<button>
+<button class="botao-comprar">
 🛍️ COMPRAR AGORA
 </button>
 
 </a>
 
 <button
-type="button"
+class="botao-carrinho-produto"
 onclick="adicionarCarrinho(
 'Caixa de Som Portátil IPX6',
 79.99,
@@ -1052,9 +1424,9 @@ onclick="adicionarCarrinho(
 </div>
 
 
-<!-- =========================
+<!-- =====================================================
      5 - SUPORTE
-     ========================= -->
+     ===================================================== -->
 
 <div class="produto"
      data-categoria="acessorios">
@@ -1086,14 +1458,14 @@ href="https://www.asaas.com/c/m0x24rts81acyv8q"
 target="_blank"
 rel="noopener noreferrer">
 
-<button>
+<button class="botao-comprar">
 🛍️ COMPRAR AGORA
 </button>
 
 </a>
 
 <button
-type="button"
+class="botao-carrinho-produto"
 onclick="adicionarCarrinho(
 'Suporte Veicular Universal',
 39.99,
@@ -1107,9 +1479,9 @@ onclick="adicionarCarrinho(
 </div>
 
 
-<!-- =========================
+<!-- =====================================================
      6 - ANIMAL PRINT
-     ========================= -->
+     ===================================================== -->
 
 <div class="produto"
      data-categoria="garrafas">
@@ -1145,14 +1517,14 @@ href="https://www.asaas.com/c/q3kmms6ackkmlffe"
 target="_blank"
 rel="noopener noreferrer">
 
-<button>
+<button class="botao-comprar">
 🛍️ COMPRAR AGORA
 </button>
 
 </a>
 
 <button
-type="button"
+class="botao-carrinho-produto"
 onclick="adicionarCarrinho(
 'Garrafa Térmica Inox Animal Print 600 ml',
 59.99,
@@ -1166,9 +1538,9 @@ onclick="adicionarCarrinho(
 </div>
 
 
-<!-- =========================
+<!-- =====================================================
      7 - GARRAFA AZUL
-     ========================= -->
+     ===================================================== -->
 
 <div class="produto"
      data-categoria="garrafas">
@@ -1204,14 +1576,14 @@ href="https://www.asaas.com/c/gl2aqbn42d81qmam"
 target="_blank"
 rel="noopener noreferrer">
 
-<button>
+<button class="botao-comprar">
 🛍️ COMPRAR AGORA
 </button>
 
 </a>
 
 <button
-type="button"
+class="botao-carrinho-produto"
 onclick="adicionarCarrinho(
 'Garrafa Térmica Inox Azul 600 ml',
 59.99,
@@ -1225,9 +1597,9 @@ onclick="adicionarCarrinho(
 </div>
 
 
-<!-- =========================
+<!-- =====================================================
      8 - MASSAGEADOR
-     ========================= -->
+     ===================================================== -->
 
 <div class="produto"
      data-categoria="beleza">
@@ -1263,14 +1635,14 @@ href="https://www.asaas.com/c/1s3c88ucgwcogyu0"
 target="_blank"
 rel="noopener noreferrer">
 
-<button>
+<button class="botao-comprar">
 🛍️ COMPRAR AGORA
 </button>
 
 </a>
 
 <button
-type="button"
+class="botao-carrinho-produto"
 onclick="adicionarCarrinho(
 'Massageador Muscular Elétrico Ultra Potência',
 120,
@@ -1284,9 +1656,9 @@ onclick="adicionarCarrinho(
 </div>
 
 
-<!-- =========================
+<!-- =====================================================
      9 - GARRAFA PRETA
-     ========================= -->
+     ===================================================== -->
 
 <div class="produto"
      data-categoria="garrafas">
@@ -1322,14 +1694,14 @@ href="https://www.asaas.com/c/qrf3el8uhdqecgcm"
 target="_blank"
 rel="noopener noreferrer">
 
-<button>
+<button class="botao-comprar">
 🛍️ COMPRAR AGORA
 </button>
 
 </a>
 
 <button
-type="button"
+class="botao-carrinho-produto"
 onclick="adicionarCarrinho(
 'Garrafa Térmica Inox 700 ml Preta',
 69.99,
@@ -1343,9 +1715,9 @@ onclick="adicionarCarrinho(
 </div>
 
 
-<!-- =========================
+<!-- =====================================================
      10 - GARRAFA BRANCA
-     ========================= -->
+     ===================================================== -->
 
 <div class="produto"
      data-categoria="garrafas">
@@ -1380,14 +1752,14 @@ href="https://www.asaas.com/c/a3ybkpyw0pxz2lr0"
 target="_blank"
 rel="noopener noreferrer">
 
-<button>
+<button class="botao-comprar">
 🛍️ COMPRAR AGORA
 </button>
 
 </a>
 
 <button
-type="button"
+class="botao-carrinho-produto"
 onclick="adicionarCarrinho(
 'Garrafa Térmica 700 ml Branca',
 69.99,
@@ -1401,9 +1773,9 @@ onclick="adicionarCarrinho(
 </div>
 
 
-<!-- =========================
+<!-- =====================================================
      11 - GARRAFA 500 ML
-     ========================= -->
+     ===================================================== -->
 
 <div class="produto"
      data-categoria="garrafas">
@@ -1435,14 +1807,14 @@ href="https://www.asaas.com/c/my6e0w2b3h7yshpr"
 target="_blank"
 rel="noopener noreferrer">
 
-<button>
+<button class="botao-comprar">
 🛍️ COMPRAR AGORA
 </button>
 
 </a>
 
 <button
-type="button"
+class="botao-carrinho-produto"
 onclick="adicionarCarrinho(
 'Garrafa Térmica Inox 500 ml',
 49.99,
@@ -1456,9 +1828,9 @@ onclick="adicionarCarrinho(
 </div>
 
 
-<!-- =========================
+<!-- =====================================================
      12 - GARRAFA FLORAL
-     ========================= -->
+     ===================================================== -->
 
 <div class="produto"
      data-categoria="garrafas">
@@ -1489,14 +1861,14 @@ href="https://www.asaas.com/c/hnrv45gn9lp9j32a"
 target="_blank"
 rel="noopener noreferrer">
 
-<button>
+<button class="botao-comprar">
 🛍️ COMPRAR AGORA
 </button>
 
 </a>
 
 <button
-type="button"
+class="botao-carrinho-produto"
 onclick="adicionarCarrinho(
 'Garrafa Térmica Inox 500 ml Floral',
 49.99,
@@ -1509,12 +1881,53 @@ onclick="adicionarCarrinho(
 
 </div>
 
+
 </div>
 
 
-<!-- =========================
+<!-- =====================================================
+     CONTATO E ENTREGA
+     ===================================================== -->
+
+<section class="contato-loja">
+
+    <h2>
+        💜 Fale com o MEU ACHADO
+    </h2>
+
+    <p>
+        📱 Telefone / WhatsApp:
+        <strong>(27) 9 9612-9074</strong>
+    </p>
+
+    <p>
+        🚚 Fazemos entregas para todo o Brasil.
+    </p>
+
+    <p>
+        📍 Guarapari - Espírito Santo
+    </p>
+
+    <p>
+        💳 Aceitamos Pix, cartão e boleto.
+    </p>
+
+    <a
+        class="whatsapp"
+        href="https://wa.me/5527996129074"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        💬 FALAR NO WHATSAPP
+
+    </a>
+
+</section>
+
+
+<!-- =====================================================
      CARRINHO
-     ========================= -->
+     ===================================================== -->
 
 <button
 id="botaoCarrinho"
@@ -1592,9 +2005,9 @@ onclick="finalizarCarrinho()">
 </div>
 
 
-<!-- =========================
+<!-- =====================================================
      RODAPÉ
-     ========================= -->
+     ===================================================== -->
 
 <footer class="meu-rodape">
 
@@ -1602,14 +2015,37 @@ onclick="finalizarCarrinho()">
 MEU ACHADO
 </strong>
 
-<br><br>
+<br>
 
 ✨ Achados incríveis para você ✨
+
+<br>
+
+📍 Guarapari - Espírito Santo
+
+<br>
+
+🚚 Entrega para todo o Brasil
+
+<br>
+
+📱 (27) 9 9612-9074
+
+<div class="meios-pagamento">
+
+💳 Pagamentos aceitos:
+<br>
+<strong>
+PIX • CARTÃO • BOLETO
+</strong>
+
+</div>
 
 </footer>
 
 
 <script>
+
 
 /* =====================================================
    PESQUISA
@@ -1667,16 +2103,13 @@ function filtrarCategoria(
             ".meu-categorias button"
         );
 
-
     botoes.forEach(function(btn) {
 
         btn.classList.remove("ativo");
 
     });
 
-
     botao.classList.add("ativo");
-
 
     produtos.forEach(function(produto) {
 
@@ -1694,7 +2127,6 @@ function filtrarCategoria(
         }
 
     });
-
 
     document
         .getElementById("pesquisaProdutos")
@@ -1729,7 +2161,7 @@ function fecharCarrinho() {
 
 
 /* =====================================================
-   ADICIONAR
+   ADICIONAR AO CARRINHO
    ===================================================== */
 
 function adicionarCarrinho(
@@ -1742,7 +2174,6 @@ function adicionarCarrinho(
         carrinho.find(
             item => item.nome === nome
         );
-
 
     if (produto) {
 
@@ -1763,7 +2194,6 @@ function adicionarCarrinho(
         });
 
     }
-
 
     atualizarCarrinho();
 
@@ -1793,7 +2223,6 @@ function diminuirQuantidade(index) {
 
     carrinho[index].quantidade--;
 
-
     if (
         carrinho[index].quantidade <= 0
     ) {
@@ -1801,7 +2230,6 @@ function diminuirQuantidade(index) {
         carrinho.splice(index, 1);
 
     }
-
 
     atualizarCarrinho();
 
@@ -1822,7 +2250,7 @@ function removerCarrinho(index) {
 
 
 /* =====================================================
-   ATUALIZAR
+   ATUALIZAR CARRINHO
    ===================================================== */
 
 function atualizarCarrinho() {
@@ -1841,7 +2269,6 @@ function atualizarCarrinho() {
         document.getElementById(
             "totalCarrinho"
         );
-
 
     let totalItens = 0;
 
@@ -1871,26 +2298,21 @@ function atualizarCarrinho() {
 
         lista.innerHTML = "";
 
-
         carrinho.forEach(
             function(produto, index) {
 
                 totalItens +=
                     produto.quantidade;
 
-
                 total +=
                     produto.preco *
                     produto.quantidade;
 
-
                 const item =
                     document.createElement("div");
 
-
                 item.className =
                     "item-carrinho";
-
 
                 item.innerHTML = `
 
@@ -1915,7 +2337,6 @@ function atualizarCarrinho() {
 
                         </span>
 
-
                         <div
                             class="controles">
 
@@ -1929,11 +2350,9 @@ function atualizarCarrinho() {
 
                             </button>
 
-
                             <strong>
                                 ${produto.quantidade}
                             </strong>
-
 
                             <button
                                 onclick="
@@ -1944,7 +2363,6 @@ function atualizarCarrinho() {
                                 +
 
                             </button>
-
 
                             <button
                                 class="remover"
@@ -1963,7 +2381,6 @@ function atualizarCarrinho() {
 
                 `;
 
-
                 lista.appendChild(item);
 
             }
@@ -1974,7 +2391,6 @@ function atualizarCarrinho() {
 
     contador.textContent =
         totalItens;
-
 
     totalElemento.textContent =
         "R$ " +
@@ -2003,64 +2419,48 @@ function finalizarCarrinho() {
 
     }
 
-
-    let totalItens = 0;
-
     let total = 0;
+
+    let mensagem =
+        "Olá! Vim pelo site MEU ACHADO.%0A%0A";
+
+    mensagem +=
+        "Gostaria de comprar:%0A%0A";
 
 
     carrinho.forEach(
         function(produto) {
-
-            totalItens +=
-                produto.quantidade;
 
             total +=
                 produto.preco *
                 produto.quantidade;
 
-        }
-    );
-
-
-    let mensagem =
-        "🛍️ MEU ACHADO\n\n";
-
-
-    mensagem +=
-        "Produtos escolhidos:\n\n";
-
-
-    carrinho.forEach(
-        function(produto) {
-
             mensagem +=
                 produto.quantidade +
                 "x " +
                 produto.nome +
-                "\n";
+                "%0A";
 
         }
     );
 
 
     mensagem +=
-        "\nTotal: R$ " +
+        "%0ATotal: R$ " +
         total
         .toFixed(2)
         .replace(".", ",");
 
 
-    alert(mensagem);
+    mensagem +=
+        "%0A%0AForma de pagamento: Pix, cartão ou boleto.";
 
 
-    /*
-       Os pagamentos dos produtos continuam
-       nos botões individuais "COMPRAR AGORA".
-
-       O carrinho serve para o cliente organizar
-       os produtos escolhidos e visualizar o total.
-    */
+    window.open(
+        "https://wa.me/5527996129074?text=" +
+        mensagem,
+        "_blank"
+    );
 
 }
 
@@ -2082,4 +2482,5 @@ document.addEventListener(
 
 
 </body>
+
 </html>
